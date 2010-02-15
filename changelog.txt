@@ -1,0 +1,33 @@
+Changelog
+
+************
+v1.7
+************
+- The module is now Xoops 2.3 compatible
+- A warning was removed in the module's index page
+
+************
+v1.6
+************
+- Bugs corrections
+
+
+************
+v1.4
+************
+- Some minor modifications in the PHP code and in the templates
+- I have added 3 new blocks :
+	most visited pages
+	best rated pages
+	most recent pages
+  So I have added the following defines in the modinfo.ph language files :
+		_MI_SHORTCUTS_BNAME2
+		_MI_SHORTCUTS_BNAME2_DESC
+		_MI_SHORTCUTS_BNAME3
+		_MI_SHORTCUTS_BNAME3_DESC
+		_MI_SHORTCUTS_BNAME4
+		_MI_SHORTCUTS_BNAME4_DESC
+	and ths in blocks.php
+		_SHORTCUT_INFORMATION_TO_DISPLAY
+		_SHORTCUT_ELEMENTS_TO_DISPLAY
+
