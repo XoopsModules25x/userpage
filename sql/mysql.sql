@@ -9,4 +9,4 @@ CREATE TABLE shortcuts (
   PRIMARY KEY  (shortcutid),
   KEY uid (uid),
   KEY title (title)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
