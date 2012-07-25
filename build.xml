@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="userpage" default="startBuild" basedir=".">
+	<description>
+		Création de l'archive zip
+	</description>
+
+	<property name="nomprojet" value="userpage" />
+
+    <target name="startBuild">
+    	<delete dir="language/frenchUTF8" />
+    	<delete dir="language/englishUTF8" />
+
+		<mkdir dir="language/frenchUTF8" />
+		<mkdir dir="language/englishUTF8" />
+
+		<copy todir="language/frenchUTF8">
+    		<fileset dir="language/french" />
+  		</copy>
+		<copy todir="language/englishUTF8">
+	    	<fileset dir="language/english" />
+	  	</copy>
+		<delete file="${nomprojet}.zip" />
+
+		<exec executable="cmd">
+    		<arg value="/c"/>
+    		<arg value="utf8-2.bat"/>
+    		<arg value="${basedir}\language\frenchUTF8\*.*"/>
+  		</exec>
+
+		<exec executable="cmd">
+    		<arg value="/c"/>
+    		<arg value="utf8-2.bat"/>
+    		<arg value="${basedir}\language\frenchUTF8\mail_template\*.*"/>
+  		</exec>
+
+		<exec executable="cmd">
+    		<arg value="/c"/>
+    		<arg value="utf8-2.bat"/>
+    		<arg value="${basedir}\language\englishUTF8\*.*"/>
+  		</exec>
+
+		<exec executable="cmd">
+    		<arg value="/c"/>
+    		<arg value="utf8-2.bat"/>
+    		<arg value="${basedir}\language\englishUTF8\mail_template\*.*"/>
+  		</exec>
+
+		<zip destfile="${nomprojet}.zip">
+			<zipfileset dir="." excludes= ".buildpath, **/.cache, **/.settings, **/.svn, **/templates karting-spirit.com, .cache/**, .project, .settings/**, _todo.txt, build.xml, datas/**, docs/**, documentation/**, FTPClient.xml, htaccessgen.php, infomaniak.htaccess, originaux.7z, Thumbs.db, xoops3.sql" />
+		</zip>
+
+    	<delete dir="language/frenchUTF8" />
+    	<delete dir="language/englishUTF8" />
+
+    </target>
+</project>
