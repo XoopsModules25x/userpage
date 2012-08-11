@@ -2,27 +2,27 @@
 /**
  * ****************************************************************************
  * SHORTCUTS - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  * ****************************************************************************
  */
-define("_AM_SHORTCUT_STATS","Åý·×");
-define("_AM_SHORTCUT_STATS0","¥·¥ç¡¼¥È¥«¥Ã¥È¤ÎºÇÂç¿ô : %d");
-define("_AM_SHORTCUT_STATS1","¥Ú¡¼¥¸Ë¬Ìä¿ô¤Î¾å°Ì %d ·ï");
-define("_AM_SHORTCUT_STATS2","¾å°ÌÉ¾²Á¤Î¥Ú¡¼¥¸");
-define("_AM_SHORTCUT_STATS3","¤è¤¯¥Ö¥Ã¥¯¥Þ¡¼¥¯¤µ¤ì¤¿¥Ú¡¼¥¸");
-define("_AM_SHORTCUT_STATS4","¥æ¡¼¥¶¡¼¤Î¥È¥Ã¥× %d");
-define("_AM_SHORTCUT_PAGE","¥Ú¡¼¥¸");
-define("_AM_SHORTCUT_VISITS","Ë¬Ìä¿ô");
-define("_AM_SHORTCUT_COUNT","¥«¥¦¥ó¥È");
-define("_AM_SHORTCUT_VOTE","ÅêÉ¼");
-define("_AM_SHORTCUT_USER","¥æ¡¼¥¶¡¼");
-define("_AM_SHORTCUT_USER_COUNT","¥·¥ç¡¼¥È¥«¥Ã¥È¿ô");
-define("_AM_SHORTCUT_LATEST_SHORTCUTS","ºÇ¿·¤Î¥Ö¥Ã¥¯¥Þ¡¼¥¯¤µ¤ì¤¿¥Ú¡¼¥¸");
-define("_AM_SHORTCUT_DATE","Æü»þ");
+define("_AM_SHORTCUT_STATS","ï¿½ï¿½ï¿½ï¿½");
+define("_AM_SHORTCUT_STATS0","ï¿½ï¿½ï¿½ç¡¼ï¿½È¥ï¿½ï¿½Ã¥È¤Îºï¿½ï¿½ï¿½ï¿½ : %d");
+define("_AM_SHORTCUT_STATS1","ï¿½Ú¡ï¿½ï¿½ï¿½Ë¬ï¿½ï¿½ï¿½Î¾ï¿½ï¿½ %d ï¿½ï¿½");
+define("_AM_SHORTCUT_STATS2","ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½Î¥Ú¡ï¿½ï¿½ï¿½");
+define("_AM_SHORTCUT_STATS3","ï¿½è¤¯ï¿½Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¤¿ï¿½Ú¡ï¿½ï¿½ï¿½");
+define("_AM_SHORTCUT_STATS4","ï¿½æ¡¼ï¿½ï¿½ï¿½ï¿½ï¿½Î¥È¥Ã¥ï¿½ %d");
+define("_AM_SHORTCUT_PAGE","ï¿½Ú¡ï¿½ï¿½ï¿½");
+define("_AM_SHORTCUT_VISITS","Ë¬ï¿½ï¿½ï¿½");
+define("_AM_SHORTCUT_COUNT","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_AM_SHORTCUT_VOTE","ï¿½ï¿½É¼");
+define("_AM_SHORTCUT_USER","ï¿½æ¡¼ï¿½ï¿½ï¿½ï¿½");
+define("_AM_SHORTCUT_USER_COUNT","ï¿½ï¿½ï¿½ç¡¼ï¿½È¥ï¿½ï¿½Ã¥È¿ï¿½");
+define("_AM_SHORTCUT_LATEST_SHORTCUTS","ï¿½Ç¿ï¿½ï¿½Î¥Ö¥Ã¥ï¿½ï¿½Þ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¤¿ï¿½Ú¡ï¿½ï¿½ï¿½");
+define("_AM_SHORTCUT_DATE","ï¿½ï¿½ï¿½ï¿½");
 
-define('_AM_SHORTCUTS_UPGRADEFAILED', '¥¢¥Ã¥×¥°¥ì¡¼¥É¤Ë¼ºÇÔ¤·¤Þ¤·¤¿');
-define('_AM_SHORTCUTS_UPGRADEFAILED21', "¿·¤·¤¤¥Õ¥£¡¼¥ë¥É¤ò¥·¥ç¡¼¥È¥«¥Ã¥È¥Æ¡¼¥Ö¥ë¤Ë²Ã¤¨¤é¤ì¤Þ¤»¤ó");
-define('_AM_SHORTCUTS_UPGRADEFAILED0', "¥á¥Ã¥»¡¼¥¸¤Ë½¾¤¤¡¢¥â¥¸¥å¡¼¥ë¥Õ¥©¥ë¥À¤Ë¤¢¤ëSQLÄêµÁ¥Õ¥¡¥¤¥ë¤ò¸µ¤ËphpMyAdminÅù¤ÇÌäÂê¤ò½¤Àµ¤·¤Æ¤¯¤À¤µ¤¤");
-define('_AM_SHORTCUTS_UPGRADECOMPLETE', '¥¢¥Ã¥×¥°¥ì¡¼¥É´°Î»');
-define('_AM_SHORTCUTS_UPGR_ACCESS_ERROR',"¥¨¥é¡¼¡ª¥¢¥Ã¥×¥°¥ì¡¼¥É¤¹¤ë¤Ë¤Ï¤³¤Î¥â¥¸¥å¡¼¥ë¤Î´ÉÍý¼Ô¤Ç¤¢¤ëÉ¬Í×¤¬¤¢¤ê¤Þ¤¹");
+define('_AM_SHORTCUTS_UPGRADEFAILED','ï¿½ï¿½ï¿½Ã¥×¥ï¿½ï¿½ì¡¼ï¿½É¤Ë¼ï¿½ï¿½Ô¤ï¿½ï¿½Þ¤ï¿½ï¿½ï¿½');
+define('_AM_SHORTCUTS_UPGRADEFAILED21', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½É¤ò¥·¥ç¡¼ï¿½È¥ï¿½ï¿½Ã¥È¥Æ¡ï¿½ï¿½Ö¥ï¿½Ë²Ã¤ï¿½ï¿½ï¿½ï¿½Þ¤ï¿½ï¿½ï¿½");
+define('_AM_SHORTCUTS_UPGRADEFAILED0', "ï¿½ï¿½Ã¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¥¸ï¿½å¡¼ï¿½ï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½Ë¤ï¿½ï¿½ï¿½SQLï¿½ï¿½ï¿½ï¿½Õ¥ï¿½ï¿½ï¿½ï¿½ï¿½ò¸µ¤ï¿½phpMyAdminï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_AM_SHORTCUTS_UPGRADECOMPLETE','ï¿½ï¿½ï¿½Ã¥×¥ï¿½ï¿½ì¡¼ï¿½É´ï¿½Î»');
+define('_AM_SHORTCUTS_UPGR_ACCESS_ERROR',"ï¿½ï¿½ï¿½é¡¼ï¿½ï¿½ï¿½ï¿½ï¿½Ã¥×¥ï¿½ï¿½ì¡¼ï¿½É¤ï¿½ï¿½ï¿½Ë¤Ï¤ï¿½ï¿½Î¥â¥¸ï¿½å¡¼ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½Ô¤Ç¤ï¿½ï¿½ï¿½É¬ï¿½×¤ï¿½ï¿½ï¿½ï¿½ï¿½Þ¤ï¿½");
 ?>

@@ -5,7 +5,7 @@
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
  * ****************************************************************************
  */
-define('_MI_SHORTCUTS_NAME', 'Shortcuts');
+define('_MI_SHORTCUTS_NAME','Shortcuts');
 define('_MI_SHORTCUTS_DESC','Enable users to manage internals shortcuts');
 define('_MI_SHORTCUTS_BNAME1','Shortcuts');
 define('_MI_SHORTCUTS_BNAME1_DESC','Show, add and delete shortcuts');

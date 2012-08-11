@@ -5,7 +5,7 @@
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
  * ****************************************************************************
  */
-define('_MI_SHORTCUTS_NAME', 'Shortcuts');
+define('_MI_SHORTCUTS_NAME','Shortcuts');
 define('_MI_SHORTCUTS_DESC','Permettre aux utilisateurs de gérer des raccourcis internes au site');
 define('_MI_SHORTCUTS_BNAME1','Raccourcis');
 define('_MI_SHORTCUTS_BNAME1_DESC','Voir, ajouter et supprimer des raccourcis');

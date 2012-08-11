@@ -20,9 +20,9 @@ define("_AM_SHORTCUT_USER_COUNT","Nombre de raccourcis");
 define("_AM_SHORTCUT_LATEST_SHORTCUTS","Dernières pages mises en raccourcis");
 define("_AM_SHORTCUT_DATE","Date");
 
-define('_AM_SHORTCUTS_UPGRADEFAILED', 'La mise à jour à échouée');
+define('_AM_SHORTCUTS_UPGRADEFAILED','La mise à jour à échouée');
 define('_AM_SHORTCUTS_UPGRADEFAILED21', "Impossible d'ajuoter les nouveaux champs à la table shortcuts");
 define('_AM_SHORTCUTS_UPGRADEFAILED0', "Veuillez noter les mesages et essayer de corriger le prolème avec par exemple phpMyadmin et la définition sql de la table disponible dans le répertoire 'sql' du module");
-define('_AM_SHORTCUTS_UPGRADECOMPLETE', 'Mise à jour terminée');
+define('_AM_SHORTCUTS_UPGRADECOMPLETE','Mise à jour terminée');
 define('_AM_SHORTCUTS_UPGR_ACCESS_ERROR',"Erreur, pour utiliser le script de mise à jour, vous devez être un administrateur du module");
 ?>
