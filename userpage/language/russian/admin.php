@@ -21,8 +21,8 @@ define("_AM_SHORTCUT_LATEST_SHORTCUTS","Òîëüêî ÷òî äîáàâëåííû
 define("_AM_SHORTCUT_DATE","Äàòà");
 
 define('_AM_SHORTCUTS_UPGRADEFAILED','Íå óäàëîñü âûïîëíèòü îáíîâëåíèå');
-define('_AM_SHORTCUTS_UPGRADEFAILED21', "Íåâîçìîæíî äîáàâèòü íîâóþ çàïèñü ê òàáëèöå çàêëàäîê");
-define('_AM_SHORTCUTS_UPGRADEFAILED0', "Ïîæàëóéñòà ïîïðîáðîáóéòå ðåøèòü ïðîáëåìû ñ phpMyAdmin è sql-ôàéëîì â äèðåêòîðèè 'sql' ìîäóëÿ çàêëàäîê");
+define('_AM_SHORTCUTS_UPGRADEFAILED21',"Íåâîçìîæíî äîáàâèòü íîâóþ çàïèñü ê òàáëèöå çàêëàäîê");
+define('_AM_SHORTCUTS_UPGRADEFAILED0',"Ïîæàëóéñòà ïîïðîáðîáóéòå ðåøèòü ïðîáëåìû ñ phpMyAdmin è sql-ôàéëîì â äèðåêòîðèè 'sql' ìîäóëÿ çàêëàäîê");
 define('_AM_SHORTCUTS_UPGRADECOMPLETE','Îáíîâëåíèå çàâåðøåíî');
 define('_AM_SHORTCUTS_UPGR_ACCESS_ERROR',"Îøèáêà! Äëÿ òîãî, ÷òîáû îáíîâèòü ìîäóëü, âû äîëæíû îáëàäàòü àäìèíèñòðàòèâíûìè ïðàâàìè.");
 ?>
