@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * userpage - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) HervÃ© Thouzard (http://www.herve-thouzard.com/)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,10 +11,10 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @copyright       HervÃ© Thouzard (http://www.herve-thouzard.com/)
  * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
  * @package         userpage
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @author 			HervÃ© Thouzard (http://www.herve-thouzard.com/)
  *
  * Version : $Id:
  * ****************************************************************************
@@ -24,15 +24,32 @@ if (!defined('XOOPS_ROOT_PATH')) {
 }
 
 $modversion['name'] = _MI_USERPAGE_NAME;
-$modversion['version'] = 1.5;
+$modversion['version'] = 1.6;
 $modversion['description'] = _MI_USERPAGE_DESC;
 $modversion['credits'] = "DefianceB0y, Riosoft, Shine, Gibaphp, Feichtl and Calidro (and all the others) for the quick translations !";
-$modversion['author'] = 'Instant Zero - http://xoops.instant-zero.com';
-$modversion['help'] = "";
-$modversion['license'] = "GPL";
+$modversion['author'] = 'HervÃ© Thouzard (http://www.herve-thouzard.com/)';
+$modversion['help']        = 'page=help';
+$modversion['license']     = 'GNU GPL 2.0 or later';
+$modversion['license_url'] = "www.gnu.org/licenses/gpl-2.0.html";
 $modversion['official'] = 0;
 $modversion['image'] = "images/logo_userpage.png";
 $modversion['dirname'] = "userpage";
+
+$modversion['dirmoduleadmin'] = '/Frameworks/moduleclasses/moduleadmin';
+$modversion['icons16']        = '../../Frameworks/moduleclasses/icons/16';
+$modversion['icons32']        = '../../Frameworks/moduleclasses/icons/32';
+//about
+$modversion['release_date']        = '2013/02/02';
+$modversion["module_website_url"]  = "www.xoops.org";
+$modversion["module_website_name"] = "XOOPS";
+$modversion["module_status"]       = "Beta 1";
+$modversion['min_php']             = '5.2';
+$modversion['min_xoops']           = "2.5.5";
+$modversion['min_admin']           = '1.1';
+$modversion['min_db']              = array(
+    'mysql'  => '5.0.7',
+    'mysqli' => '5.0.7'
+);
 
 $modversion['sqlfile']['mysql'] = "sql/mysql.sql";
 
@@ -40,6 +57,7 @@ $modversion['tables'][0] = "userpage";
 
 // Admin things
 $modversion['hasAdmin'] = 1;
+$modversion['system_menu'] = 1;
 $modversion['adminindex'] = "admin/index.php";
 $modversion['adminmenu'] = "admin/menu.php";
 
@@ -94,80 +112,96 @@ $modversion['hasComments'] = 1;
 $modversion['comments']['pageName'] = 'index.php';
 $modversion['comments']['itemName'] = 'page_id';
 
-
+$i=0;
 /**
  * Allow html ?
  */
-$modversion['config'][1]['name'] = 'allowhtml';
-$modversion['config'][1]['title'] = '_MI_USERPAGE_OPT0';
-$modversion['config'][1]['description'] = '_MI_USERPAGE_OPT0_DSC';
-$modversion['config'][1]['formtype'] = 'yesno';
-$modversion['config'][1]['valuetype'] = 'int';
-$modversion['config'][1]['default'] = 0;
+$i++;
+$modversion['config'][$i]['name'] = 'allowhtml';
+$modversion['config'][$i]['title'] = '_MI_USERPAGE_OPT0';
+$modversion['config'][$i]['description'] = '_MI_USERPAGE_OPT0_DSC';
+$modversion['config'][$i]['formtype'] = 'yesno';
+$modversion['config'][$i]['valuetype'] = 'int';
+$modversion['config'][$i]['default'] = 0;
 
 /**
  * Allow RSS Feeds ?
  */
-$modversion['config'][2]['name'] = 'allowrss';
-$modversion['config'][2]['title'] = '_MI_USERPAGE_OPT1';
-$modversion['config'][2]['description'] = '_MI_USERPAGE_OPT1_DSC';
-$modversion['config'][2]['formtype'] = 'yesno';
-$modversion['config'][2]['valuetype'] = 'int';
-$modversion['config'][2]['default'] = 1;
+$i++;
+$modversion['config'][$i]['name'] = 'allowrss';
+$modversion['config'][$i]['title'] = '_MI_USERPAGE_OPT1';
+$modversion['config'][$i]['description'] = '_MI_USERPAGE_OPT1_DSC';
+$modversion['config'][$i]['formtype'] = 'yesno';
+$modversion['config'][$i]['valuetype'] = 'int';
+$modversion['config'][$i]['default'] = 1;
 
 /**
  * Date's format. If you don't specify anything then the default date's format will be used
  */
-$modversion['config'][3]['name'] = 'dateformat';
-$modversion['config'][3]['title'] = '_MI_USERPAGE_OPT3';
-$modversion['config'][3]['description'] = '_MI_USERPAGE_OPT3_DSC';
-$modversion['config'][3]['formtype'] = 'textbox';
-$modversion['config'][3]['valuetype'] = 'text';
-$modversion['config'][3]['default'] = '';
+$i++;
+$modversion['config'][$i]['name'] = 'dateformat';
+$modversion['config'][$i]['title'] = '_MI_USERPAGE_OPT3';
+$modversion['config'][$i]['description'] = '_MI_USERPAGE_OPT3_DSC';
+$modversion['config'][$i]['formtype'] = 'textbox';
+$modversion['config'][$i]['valuetype'] = 'text';
+$modversion['config'][$i]['default'] = '';
 
 /**
  * Number of characters to use in the RSS feed
  */
-$modversion['config'][4]['name'] = 'rsslength';
-$modversion['config'][4]['title'] = '_MI_USERPAGE_OPT4';
-$modversion['config'][4]['description'] = '_MI_USERPAGE_OPT4_DSC';
-$modversion['config'][4]['formtype'] = 'textbox';
-$modversion['config'][4]['valuetype'] = 'int';
-$modversion['config'][4]['default'] = 200;
+$i++;
+$modversion['config'][$i]['name'] = 'rsslength';
+$modversion['config'][$i]['title'] = '_MI_USERPAGE_OPT4';
+$modversion['config'][$i]['description'] = '_MI_USERPAGE_OPT4_DSC';
+$modversion['config'][$i]['formtype'] = 'textbox';
+$modversion['config'][$i]['valuetype'] = 'int';
+$modversion['config'][$i]['default'] = 200;
 
 /**
  * Number of lines per page
  */
-$modversion['config'][5]['name'] = 'linesperpage';
-$modversion['config'][5]['title'] = '_MI_USERPAGE_OPT5';
-$modversion['config'][5]['description'] = '_MI_USERPAGE_OPT5_DSC';
-$modversion['config'][5]['formtype'] = 'textbox';
-$modversion['config'][5]['valuetype'] = 'int';
-$modversion['config'][5]['default'] = 10;
+$i++;
+$modversion['config'][$i]['name'] = 'linesperpage';
+$modversion['config'][$i]['title'] = '_MI_USERPAGE_OPT5';
+$modversion['config'][$i]['description'] = '_MI_USERPAGE_OPT5_DSC';
+$modversion['config'][$i]['formtype'] = 'textbox';
+$modversion['config'][$i]['valuetype'] = 'int';
+$modversion['config'][$i]['default'] = 10;
 
 /**
  * Editor to use
  */
-$modversion['config'][6]['name'] = 'usekiovi';
-$modversion['config'][6]['title'] = '_MI_USERPAGE_OPT6';
-$modversion['config'][6]['description'] = '_MI_USERPAGE_OPT6_DSC';
-$modversion['config'][6]['formtype'] = 'select';
-$modversion['config'][6]['valuetype'] = 'text';
-$modversion['config'][6]['default'] = 'dhtml';
-xoops_load('xoopseditorhandler');
-$modversion['config'][6]['options'] = array_flip(xoopsEditorHandler::getList());
+//$modversion['config'][$i]['name'] = 'usekiovi';
+//$modversion['config'][$i]['title'] = '_MI_USERPAGE_OPT6';
+//$modversion['config'][$i]['description'] = '_MI_USERPAGE_OPT6_DSC';
+//$modversion['config'][$i]['formtype'] = 'select';
+//$modversion['config'][$i]['valuetype'] = 'text';
+//$modversion['config'][$i]['default'] = 'dhtml';
+//xoops_load('xoopseditorhandler');
+//$modversion['config'][$i]['options'] = array_flip(xoopsEditorHandler::getList());
 
+$i++;
+$modversion['config'][$i]['name'] = 'usekiovi';
+$modversion['config'][$i]['title'] = "_MI_USERPAGE_OPT6";
+$modversion['config'][$i]['description'] = '';
+$modversion['config'][$i]['formtype'] = 'select';
+$modversion['config'][$i]['valuetype'] = 'text';
+$modversion['config'][$i]['default'] = 'dhtml';
+xoops_load('xoopseditorhandler');
+$editor_handler = XoopsEditorHandler::getInstance();
+$modversion['config'][$i]['options'] = array_flip($editor_handler->getList());
 
 
 /**
  * Allow html ?
  */
-$modversion['config'][7]['name'] = 'url_rewriting';
-$modversion['config'][7]['title'] = '_MI_USERPAGE_URL_REWRITING';
-$modversion['config'][7]['description'] = '';
-$modversion['config'][7]['formtype'] = 'yesno';
-$modversion['config'][7]['valuetype'] = 'int';
-$modversion['config'][7]['default'] = 0;
+$i++;
+$modversion['config'][$i]['name'] = 'url_rewriting';
+$modversion['config'][$i]['title'] = '_MI_USERPAGE_URL_REWRITING';
+$modversion['config'][$i]['description'] = '';
+$modversion['config'][$i]['formtype'] = 'yesno';
+$modversion['config'][$i]['valuetype'] = 'int';
+$modversion['config'][$i]['default'] = 0;
 
 
 // Notifications

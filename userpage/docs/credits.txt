@@ -1,0 +1,6 @@
+Credits
+===============
+
+Originally developed by Hervé Thouzard (http://www.herve-thouzard.com/)
+
+Contributors: DefianceB0y, Riosoft, Shine, Gibaphp, Feichtl and Calidro (and all the others) for the quick translations

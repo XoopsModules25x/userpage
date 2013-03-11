@@ -59,4 +59,6 @@ define("_MI_USERPAGE_FORM_TINYEDITOR","TinyEditor");
 
 // Added in version 1.3
 define("_MI_USERPAGE_URL_REWRITING","Use URL Rewriting?");
-?>
+
+//1.6
+define('_MI_USERPAGE_ADMMENU0',"Main");

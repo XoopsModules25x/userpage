@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * userpage - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervé Thouzard (http://www.herve-thouzard.com/)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,10 +11,10 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @copyright       Hervé Thouzard (http://www.herve-thouzard.com/)
  * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
  * @package         userpage
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @author 			Hervé Thouzard (http://www.herve-thouzard.com/)
  *
  * Version : $Id:
  * ****************************************************************************

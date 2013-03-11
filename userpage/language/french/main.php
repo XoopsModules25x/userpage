@@ -25,19 +25,19 @@
 //  ------------------------------------------------------------------------ //
 define("_USERPAGE_TITLE","Titre");
 define("_USERPAGE_CONTENT","Contenu");
-define("_USERPAGE_CREATION_DATE","Date de création : ");
+define("_USERPAGE_CREATION_DATE","Date de crÃ©ation : ");
 define("_USERPAGE_HITS","Vues");
 define("_USERPAGE_EDIT","Editer");
 define("_USERPAGE_PRINTABLE","Version imprimable");
 define("_USERPAGE_PDF","Version PDF");
-define("_USERPAGE_EMAIL","En parler à un ami");
+define("_USERPAGE_EMAIL","En parler Ã  un ami");
 define("_USERPAGE_YOUR_PAGE","Votre page");
 define("_USERPAGE_RSS_FEED","Flux RSS");
 define("_USERPAGE_INTARTICLE","Page int&eacute;ressante sur %s");
 define("_USERPAGE_INTARTFOUND","Voici une page int&eacute;ressante trouv&eacute; sur %s");
 define("_USERPAGE_EMPTY_PAGE","La page est vide");
 define("_USERPAGE_DB_OK","Mise &agrave; jour de la base de donn&eacute;es avec succ&egrave;s");
-define("_USERPAGE_DB_PB", "Erreur pendant la mise à jour de la base de donn&eacute;es" );
+define("_USERPAGE_DB_PB", "Erreur pendant la mise Ã  jour de la base de donn&eacute;es" );
 define("_USERPAGE_PAGE_NOT_FOUND","Page introuvable");
 define("_USERPAGE_PAGE_OF","Page de ");
 define("_USERPAGE_THISCOMESFROM","Cette page provient de %s");

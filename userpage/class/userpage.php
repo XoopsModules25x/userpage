@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * userpage - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervé Thouzard (http://www.herve-thouzard.com/)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,22 +11,22 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @copyright       Hervé Thouzard (http://www.herve-thouzard.com/)
  * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
  * @package         userpage
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @author 			Hervé Thouzard (http://www.herve-thouzard.com/)
  *
  * Version : $Id:
  * ****************************************************************************
  */
-require_once XOOPS_ROOT_PATH.'/class/xoopsobject.php';
+require_once XOOPS_ROOT_PATH.'/kernel/object.php';
 require_once XOOPS_ROOT_PATH.'/modules/userpage/include/common.php';
 
 class userpage extends XoopsObject
 {
 	function userpage($id=null)
 	{
-		$this->db =& Database::getInstance();
+		$this->db =& XoopsDatabaseFactory::getDatabaseConnection();
 		$this->initVar('up_pageid',XOBJ_DTYPE_INT,null,false,10);
 		$this->initVar('up_uid',XOBJ_DTYPE_INT,null,false,10);
 		$this->initVar('up_title',XOBJ_DTYPE_TXTBOX, null, false,255);
