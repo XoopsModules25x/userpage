@@ -19,6 +19,10 @@
  * Version : $Id:
  * ****************************************************************************
  */
-require 'header.php';
-require XOOPS_ROOT_PATH.'/include/comment_edit.php';
+if(file_exists('../../mainfile.php')) {
+	require '../../mainfile.php';
+} elseif(file_exists('../../../mainfile.php')) {
+	require '../../../mainfile.php';
+}
+require_once XOOPS_ROOT_PATH.'/modules/userpage/include/common.php';
 ?>

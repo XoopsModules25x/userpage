@@ -1,14 +1,25 @@
 <?php
 /**
  * ****************************************************************************
- * USERPAGE - MODULE FOR XOOPS
+ * userpage - MODULE FOR XOOPS
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package         userpage
+ * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * Version : $Id:
  * ****************************************************************************
  */
-
-require_once "../../mainfile.php";
-require_once XOOPS_ROOT_PATH."/modules/userpage/include/functions.php";
-
+require 'header.php';
 // If you want to limit access to this page to registred users only, uncomment the following lines :
 /*
 if(!is_object($xoopsUser)) {	// Only for registred users
@@ -38,7 +49,7 @@ if($cnt>0) {
 	exit();
 }
 
-$page->setVar('dohtml', userpage_getmoduleoption('allowhtml'));
+$page->setVar('dohtml', userpage_utils::getModuleOption('allowhtml'));
 $myts =& MyTextSanitizer::getInstance();
 echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">';
 echo '<html><head>';
@@ -61,5 +72,5 @@ echo "<tr><td>".$page->getVar('up_text')."</td></tr>";
 echo "</table>";
 echo '</td></tr></table></td></tr></table><br /><br />';
 printf(_USERPAGE_THISCOMESFROM,$xoopsConfig['sitename']);
-echo '<br /><a href="'.XOOPS_URL.'/">'.XOOPS_URL.'</a><br /><br />'._USERPAGE_URLFORPAGE.' <br /><a href="'.XOOPS_URL.'/modules/userpage/index.php?page_id='.$page->getVar('up_pageid').'">'.XOOPS_URL.'/modules/userpage/index.php?page_id='.$page->getVar('up_pageid').'</a></td></tr></table></body></html>';
+echo '<br /><a href="'.XOOPS_URL.'/">'.XOOPS_URL.'</a><br /><br />'._USERPAGE_URLFORPAGE.' <br /><a href="'.$page->getURL().'">'.$page->getURL().'</a></td></tr></table></body></html>';
 ?>

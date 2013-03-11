@@ -1,16 +1,28 @@
 <?php
 /**
  * ****************************************************************************
- * USERPAGE - MODULE FOR XOOPS
+ * userpage - MODULE FOR XOOPS
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package         userpage
+ * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * Version : $Id:
  * ****************************************************************************
  */
-
 require_once '../../../include/cp_header.php';
+require_once XOOPS_ROOT_PATH.'/modules/userpage/include/common.php';
 require_once XOOPS_ROOT_PATH.'/modules/userpage/admin/functions.php';
-require_once XOOPS_ROOT_PATH.'/modules/userpage/include/functions.php';
 require_once XOOPS_ROOT_PATH.'/class/pagenav.php';
-
 
 // ********************************************************************************************************************
 // **** Main
@@ -45,7 +57,7 @@ switch ($op) {
 		}
         $totalcount = $userpage_handler->getCount();	// Pages count
 		echo '<h4>'.sprintf(_AM_USERPAGE_STATS,$totalcount).'</h4>';
-		$limit = userpage_getmoduleoption('linesperpage');
+		$limit = userpage_utils::getModuleOption('linesperpage');
 		$start = isset($_GET['start']) ? intval($_GET['start']) : 0;
 		$critere = new Criteria('1', '1','=');
 		$critere->setLimit($limit);
@@ -67,17 +79,17 @@ switch ($op) {
 		echo '<th align="center">'._AD_ACTION.'</th>';
 		echo '</tr>';
 		$class='';
-		$allowhtml = userpage_getmoduleoption('allowhtml');
+		$allowhtml = userpage_utils::getModuleOption('allowhtml');
 		foreach($pages as $page) {
 			$class = ($class == 'even') ? 'odd' : 'even';
 			$page->setVar('dohtml',$allowhtml);
 			echo "<tr class='".$class."'>";
 			echo '<td>'.$page->uname().'</td>';
 			echo "<td><a href=\"".XOOPS_URL."/modules/userpage/index.php?page_id=".$page->getVar('up_pageid')."\">".$page->getVar('up_title')."</a></td>";
-			echo "<td align=\"center\">".formatTimestamp($page->getVar('up_created'),userpage_getmoduleoption('dateformat'))."</td>";
+			echo "<td align=\"center\">".formatTimestamp($page->getVar('up_created'), userpage_utils::getModuleOption('dateformat'))."</td>";
 			echo "<td align=\"center\">".$page->getVar('up_hits')."</td>";
-			$del_action = "<a title='"._DELETE."' href='index.php?op=delete&id=".$page->getVar('up_pageid')."' ".userpage_JavascriptLinkConfirm(_USERPAGE_ARE_YOU_SURE)." ><img src='../images/delete.gif' alt='"._DELETE."' border='0' /></a>";
-			$view_action = "<a target='_blank' title='"._USERPAGE_VIEW."' href='".XOOPS_URL."/modules/userpage/index.php?page_id=".$page->getVar('up_pageid')."'><img src='../images/view.gif' alt='"._USERPAGE_VIEW."' border='0' /></a>";
+			$del_action = "<a title='"._DELETE."' href='index.php?op=delete&id=".$page->getVar('up_pageid')."' ".userpage_utils::javascriptLinkConfirm(_USERPAGE_ARE_YOU_SURE)." ><img src='../images/delete.gif' alt='"._DELETE."' border='0' /></a>";
+			$view_action = "<a target='_blank' title='"._USERPAGE_VIEW."' href='".$page->getURL()."'><img src='../images/view.gif' alt='"._USERPAGE_VIEW."' border='0' /></a>";
 			echo "<td align=\"center\">".$del_action.' '.$view_action.'</td>';
 			echo "</tr>";
 		}
@@ -99,6 +111,7 @@ switch ($op) {
 			}
 		}
 		if($res) {
+		    userpage_utils::updateCache();
 			redirect_header('index.php', 2, _USERPAGE_DB_OK);
 			exit();
 		} else {

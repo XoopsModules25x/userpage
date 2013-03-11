@@ -1,6 +1,15 @@
 Changelog
 
 *******
+v1.4
+*******
+- Code refactoring
+- Better support for Xoops 2.3.x
+- The module's templates were modified (pages and blocks)
+- You can now use url rewriting
+- There was some changes in the translations (see lang.diff)
+  
+*******
 v1.21
 *******
 - Corrected a bug in the module's administration

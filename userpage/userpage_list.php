@@ -1,24 +1,35 @@
 <?php
 /**
  * ****************************************************************************
- * USERPAGE - MODULE FOR XOOPS
+ * userpage - MODULE FOR XOOPS
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package         userpage
+ * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * Version : $Id:
  * ****************************************************************************
  */
-
-require_once "../../mainfile.php";
+require 'header.php';
 $xoopsOption['template_main'] = 'userpage_list.html';
 require_once XOOPS_ROOT_PATH.'/header.php';
-require_once XOOPS_ROOT_PATH.'/modules/userpage/include/functions.php';
+require_once XOOPS_ROOT_PATH.'/class/pagenav.php';
 
 $userpage_handler =& xoops_getmodulehandler('userpage', 'userpage');
-$allowhtml = userpage_getmoduleoption('allowhtml');
+$allowhtml = userpage_utils::getModuleOption('allowhtml');
 $myts =& MyTextSanitizer::getInstance();
 
-require_once XOOPS_ROOT_PATH.'/class/pagenav.php';
-$limit = userpage_getmoduleoption('linesperpage');
-$xoopsTpl->assign('allowrss', userpage_getmoduleoption('allowrss'));
-//$xoopsTpl->assign('op', $op);
+$limit = userpage_utils::getModuleOption('linesperpage');
+$xoopsTpl->assign('allowrss', userpage_utils::getModuleOption('allowrss'));
 $start = isset($_GET['start']) ? intval($_GET['start']) : 0;
 $critere = new Criteria('1', '1','=');
 $critere->setLimit($limit);
@@ -36,15 +47,7 @@ $pages = array();
 $pages = $userpage_handler->getObjects($critere);
 foreach($pages as $page) {
 	$page->setVar('dohtml',$allowhtml);
-	$xoopsTpl->append('pages',array(
-		'up_pageid' => $page->getVar('up_pageid'),
-		'up_uid' => $page->getVar('up_uid'),
-		'user_name' => $page->uname(),
-		'up_title' => $page->getVar('up_title'),
-		'up_text' => $page->getVar('up_text'),
-		'up_created' => formatTimestamp($page->getVar('up_created'),userpage_getmoduleoption('dateformat')),
-		'up_hits' => $page->getVar('up_hits')
-	));
+	$xoopsTpl->append('pages', $page->toArray());
 }
 // Page's title
 $xoopsTpl->assign('xoops_pagetitle', strip_tags(_USERPAGE_BOOK).' - '.$myts->htmlSpecialChars($xoopsModule->name()));

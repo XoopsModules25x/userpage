@@ -4,6 +4,13 @@ Legend :
 * Modified
 
 *******
+v 1.3
+*******
+modinfo.php
+* _MI_USERPAGE_OPT6
++ _MI_USERPAGE_URL_REWRITING
+
+*******
 v 1.2
 *******
 main.php

@@ -1,11 +1,25 @@
 <?php
 /**
  * ****************************************************************************
- * USERPAGE - MODULE FOR XOOPS
+ * userpage - MODULE FOR XOOPS
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package         userpage
+ * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * Version : $Id:
  * ****************************************************************************
  */
-include_once XOOPS_ROOT_PATH.'/modules/userpage/include/functions.php';
+require_once XOOPS_ROOT_PATH.'/modules/userpage/include/common.php';
 
 /**
  * Show most viewed pages
@@ -27,16 +41,11 @@ function b_userpage_top_show($options)	// 10=Items count, 30=Title's length
 	$pages = $userpage_handler->getObjects($criteria);
 
 	foreach($pages as $page) {
-		$page->setVar('dohtml', userpage_getmoduleoption('allowhtml'));
-		$block['pages'][]=array(
-			'up_pageid' => $page->getVar('up_pageid'),
-			'up_uid' => $page->getVar('up_uid'),
-			'user_name' => $page->uname(),
-			'up_title' => xoops_substr(strip_tags($page->getVar('up_title')),0,intval($options[1])),
-			'up_text' => $page->getVar('up_text'),
-			'up_created' => formatTimestamp($page->getVar('up_created'),userpage_getmoduleoption('dateformat')),
-			'up_hits' => $page->getVar('up_hits')
-		);
+		$page->setVar('dohtml', userpage_utils::getModuleOption('allowhtml'));
+		$data = array();
+		$data = $page->toArray();
+		$data['up_title'] = xoops_substr(strip_tags($page->getVar('up_title')),0,intval($options[1]));
+		$block['pages'][] = $data;
 	}
 	return $block;
 }

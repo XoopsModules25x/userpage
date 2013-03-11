@@ -1,18 +1,30 @@
 <?php
 /**
  * ****************************************************************************
- * USERPAGE - MODULE FOR XOOPS
+ * userpage - MODULE FOR XOOPS
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package         userpage
+ * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * Version : $Id:
  * ****************************************************************************
  */
-
-require_once '../../mainfile.php';
+require 'header.php';
 $xoopsOption['template_main'] = 'userpage_index.html';
 require_once XOOPS_ROOT_PATH.'/header.php';
-require_once XOOPS_ROOT_PATH.'/modules/userpage/include/functions.php';
 
 $userpage_handler = & xoops_getmodulehandler('userpage', 'userpage');
-$allowhtml = userpage_getmoduleoption('allowhtml');
+$allowhtml = userpage_utils::getModuleOption('allowhtml');
 $myts = & MyTextSanitizer::getInstance();
 
 $is_admin = false;
@@ -22,7 +34,7 @@ if(is_object($xoopsUser)) {
 	if($xoopsUser->isAdmin($xoopsModule->getVar('mid'))) {
 		$is_admin = true;
 	}
-	$xoopsTpl->assign('confirm_delete', userpage_JavascriptLinkConfirm(_USERPAGE_ARE_YOU_SURE));
+	$xoopsTpl->assign('confirm_delete', userpage_utils::javascriptLinkConfirm(_USERPAGE_ARE_YOU_SURE));
 } else {
 	if(!isset($_GET['page_id'])) {
 		header('Location: userpage_list.php');
@@ -35,7 +47,7 @@ if(isset($_GET['page_id'])) {
 	$page_id = intval($_GET['page_id']);
 }
 
-$xoopsTpl->assign('allowrss', userpage_getmoduleoption('allowrss'));
+$xoopsTpl->assign('allowrss', userpage_utils::getModuleOption('allowrss'));
 if(empty($page_id)) {	// Show current user's page
 	$xoopsTpl->assign('currentuser', true);
 	$criteria = new Criteria('up_uid', $uid, '=');
@@ -79,11 +91,13 @@ $xoopsTpl->assign('up_text',$page->getVar('up_text'));
 $xoopsTpl->assign('up_created',$page->getVar('up_created'));
 $xoopsTpl->assign('up_uid', $page->getVar('up_uid'));
 
+$userName = '';
 $page_user = null;
 $page_user = new XoopsUser($page->getVar('up_uid'));
 if(is_object($page_user)) {
+	$userName = $page_user->getVar('uname');
 	$xoopsTpl->assign('user_avatar', XOOPS_UPLOAD_URL.'/'.$page_user->getVar('user_avatar'));
-	$xoopsTpl->assign('user_name', $page_user->getVar('name'));
+	$xoopsTpl->assign('user_name', $userName);
 	$xoopsTpl->assign('user_uname', $page_user->getVar('uname'));
 	$xoopsTpl->assign('user_email', $page_user->getVar('email'));
 	$xoopsTpl->assign('user_url', $page_user->getVar('url'));
@@ -94,27 +108,17 @@ $xoopsTpl->assign('up_uid', $page->getVar('up_uid'));
 
 
 if($page->getVar('up_created')!=0) {
-	$xoopsTpl->assign('up_dateformated',formatTimestamp($page->getVar('up_created'),userpage_getmoduleoption('dateformat')));
+	$xoopsTpl->assign('up_dateformated',formatTimestamp($page->getVar('up_created'), userpage_utils::getModuleOption('dateformat')));
 } else {
 	$xoopsTpl->assign('up_dateformated','');
 }
 $xoopsTpl->assign('up_hits',$page->getVar('up_hits'));
-// Page's title
-$xoopsTpl->assign('xoops_pagetitle', strip_tags($page->getVar('up_title')).' - '.$myts->htmlSpecialChars($xoopsModule->name()));
-// META Keywords and description
-$meta_keywords = userpage_createmeta_keywords(strip_tags($page->getVar('up_title')).' '.strip_tags($page->getVar('up_text')));
-if(isset($xoTheme) && is_object($xoTheme)) {
-	$xoTheme->addMeta( 'meta', 'keywords', $meta_keywords);
-} else {	// Compatibility for old Xoops versions
-	$xoopsTpl->assign('xoops_meta_keywords', $meta_keywords);
-}
 
+$pagetitle = strip_tags($page->getVar('up_title')).' - '.$userName.' - '.$myts->htmlSpecialChars($xoopsModule->name());
+$meta_keywords = userpage_utils::createMetaKeywords(strip_tags($page->getVar('up_title')).' '.strip_tags($page->getVar('up_text')));
 $meta_description = strip_tags($page->getVar('up_title'));
-if(isset($xoTheme) && is_object($xoTheme)) {
-	$xoTheme->addMeta( 'meta', 'description', $meta_description);
-} else {	// Compatibility for old Xoops versions
-	$xoopsTpl->assign('xoops_meta_description', $meta_description);
-}
+
+userpage_utils::setMetas($pagetitle, $meta_description, $meta_keywords);
 
 if(!empty($page_id)) {
 	require_once XOOPS_ROOT_PATH.'/include/comment_view.php';

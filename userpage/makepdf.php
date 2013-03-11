@@ -1,17 +1,73 @@
 <?php
 /**
  * ****************************************************************************
- * USERPAGE - MODULE FOR XOOPS
+ * userpage - MODULE FOR XOOPS
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package         userpage
+ * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * Version : $Id:
  * ****************************************************************************
  */
-
-require_once "../../mainfile.php";
+require 'header.php';
 error_reporting(0);
 @$xoopsLogger->activated = false;
 
 require_once XOOPS_ROOT_PATH.'/modules/userpage/fpdf/fpdf.inc.php';
-require_once XOOPS_ROOT_PATH.'/modules/userpage/include/functions.php';
+
+/**
+ * Internal function used for PDF
+ */
+function userpage_html2text($document)
+{
+	// PHP Manual:: function preg_replace
+	// $document should contain an HTML document.
+	// This will remove HTML tags, javascript sections
+	// and white space. It will also convert some
+	// common HTML entities to their text equivalent.
+
+	$search = array ("'<script[^>]*?>.*?</script>'si",  // Strip out javascript
+	                 "'<[\/\!]*?[^<>]*?>'si",          // Strip out HTML tags
+	                 "'([\r\n])[\s]+'",                // Strip out white space
+	                 "'&(quot|#34);'i",                // Replace HTML entities
+	                 "'&(amp|#38);'i",
+	                 "'&(lt|#60);'i",
+	                 "'&(gt|#62);'i",
+	                 "'&(nbsp|#160);'i",
+	                 "'&(iexcl|#161);'i",
+	                 "'&(cent|#162);'i",
+	                 "'&(pound|#163);'i",
+	                 "'&(copy|#169);'i",
+	                 "'&#(\d+);'e");                    // evaluate as php
+
+	$replace = array ("",
+	                 "",
+	                 "\\1",
+	                 "\"",
+	                 "&",
+	                 "<",
+	                 ">",
+	                 " ",
+	                 chr(161),
+	                 chr(162),
+	                 chr(163),
+	                 chr(169),
+	                 "chr(\\1)");
+
+	$text = preg_replace($search, $replace, $document);
+	return $text;
+}
+
 
 $myts =& MyTextSanitizer::getInstance();
 
@@ -23,7 +79,7 @@ if(empty($page_id)) {
 }
 
 $userpage_handler =& xoops_getmodulehandler('userpage', 'userpage');
-$allowhtml = userpage_getmoduleoption('allowhtml');
+$allowhtml = userpage_utils::getModuleOption('allowhtml');
 
 $criteria = new Criteria('up_pageid', $page_id, '=');
 $cnt = $userpage_handler->getCount($criteria);
@@ -36,16 +92,16 @@ if( $cnt>0 ) {
 }
 $page->setVar('dohtml',$allowhtml);
 
-$pdf_title = $page->getVar('up_title');
-$pdf_content = $page->getVar('up_text');
+$pdf_title = $page->getVar('up_title', 'n');
+$pdf_content = $page->getVar('up_text', 'n');
 $pdf_author = $page->uname();
-$pdf_topic_title = $page->getVar('up_title');
-$pdf_title = $page->getVar('up_title');
+$pdf_topic_title = $page->getVar('up_title', 'n');
+$pdf_title = $page->getVar('up_title', 'n');
 $pdf_subtitle = '';
 $pdf_subsubtitle = '';
 $pdf_author = $page->uname();
-$pdf_date = formatTimestamp($page->getVar('up_created'),userpage_getmoduleoption('dateformat'));
-$pdf_url = XOOPS_URL.'/modules/userpage/index.php?page_id='.$page->getVar('up_pageid');
+$pdf_date = formatTimestamp($page->getVar('up_created'), userpage_utils::getModuleOption('dateformat'));
+$pdf_url = $page->getURL();
 // ***************************************************************************************************************************************
 
 $pdf_topic_title = userpage_html2text($myts->undoHtmlSpecialChars($pdf_topic_title));

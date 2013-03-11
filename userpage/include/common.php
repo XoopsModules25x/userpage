@@ -19,6 +19,18 @@
  * Version : $Id:
  * ****************************************************************************
  */
-require 'header.php';
-require XOOPS_ROOT_PATH.'/include/comment_edit.php';
+if (!defined("XOOPS_ROOT_PATH")) {
+ 	die("XOOPS root path not defined");
+}
+
+if( !defined("USERPAGE_DIRNAME") ) {
+	define("USERPAGE_DIRNAME", 'userpage');
+	define("USERPAGE_URL", XOOPS_URL.'/modules/'.USERPAGE_DIRNAME.'/');
+	define("USERPAGE_PATH", XOOPS_ROOT_PATH.'/modules/'.USERPAGE_DIRNAME.'/');
+	define("USERPAGE_IMAGES_URL", USERPAGE_URL.'images/');
+	define("USERPAGE_IMAGES_PATH", USERPAGE_PATH.'images/');
+}
+
+// Chargement des handler et des autres classes
+require_once USERPAGE_PATH.'class/userpage_utils.php';
 ?>

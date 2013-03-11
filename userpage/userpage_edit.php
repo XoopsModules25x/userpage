@@ -1,14 +1,28 @@
 <?php
 /**
  * ****************************************************************************
- * USERPAGE - MODULE FOR XOOPS
+ * userpage - MODULE FOR XOOPS
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package         userpage
+ * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * Version : $Id:
  * ****************************************************************************
  */
-require_once "../../mainfile.php";
+require 'header.php';
+require_once XOOPS_ROOT_PATH.'/class/xoopsformloader.php';
 $xoopsOption['template_main'] = 'userpage_edit.html';
 require_once XOOPS_ROOT_PATH.'/header.php';
-require_once XOOPS_ROOT_PATH.'/modules/userpage/include/functions.php';
 
 $userpage_handler =& xoops_getmodulehandler('userpage', 'userpage');
 $myts =& MyTextSanitizer::getInstance();
@@ -48,7 +62,7 @@ switch($op) {
 		$xoopsTpl->assign('up_hits',$page->getVar('up_hits','e'));
 		// Page's title
 		$xoopsTpl->assign('xoops_pagetitle', strip_tags(_USERPAGE_EDIT).' - '.$myts->htmlSpecialChars($xoopsModule->name()));
-		$editor = userpage_getWysiwygForm('Editor', 'up_text', $page->getVar('up_text','e'), 15, 60, 'userpage_hidden');
+		$editor = userpage_utils::getWysiwygForm('Editor', 'up_text', $page->getVar('up_text','e'), 15, 60, 'userpage_hidden');
 		$xoopsTpl->assign('editor',$editor->render());
 		break;
 
@@ -76,7 +90,7 @@ switch($op) {
 		$page->setVar('up_title',$up_title);
 		$page->setVar('up_text',$up_text);
 		if($userpage_handler->insert($page,true)) {
-			userpage_updateCache();		// Remove module's cache
+			userpage_utils::updateCache();		// Remove module's cache
 			redirect_header('index.php',1,_USERPAGE_DB_OK);
 		} else {
 			redirect_header('index.php',2,_USERPAGE_DB_PB);

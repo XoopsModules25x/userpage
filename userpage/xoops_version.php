@@ -1,24 +1,37 @@
 <?php
 /**
  * ****************************************************************************
- * USERPAGE - MODULE FOR XOOPS
+ * userpage - MODULE FOR XOOPS
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package         userpage
+ * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * Version : $Id:
  * ****************************************************************************
  */
-
 if (!defined('XOOPS_ROOT_PATH')) {
 	die('XOOPS root path not defined');
 }
 
 $modversion['name'] = _MI_USERPAGE_NAME;
-$modversion['version'] = 1.22;
+$modversion['version'] = 1.4;
 $modversion['description'] = _MI_USERPAGE_DESC;
 $modversion['credits'] = "DefianceB0y, Riosoft, Shine, Gibaphp, Feichtl and Calidro (and all the others) for the quick translations !";
 $modversion['author'] = 'Instant Zero - http://xoops.instant-zero.com';
 $modversion['help'] = "";
 $modversion['license'] = "GPL";
 $modversion['official'] = 0;
-$modversion['image'] = "images/logo_userpage.jpg";
+$modversion['image'] = "images/logo_userpage.png";
 $modversion['dirname'] = "userpage";
 
 $modversion['sqlfile']['mysql'] = "sql/mysql.sql";
@@ -151,6 +164,16 @@ $modversion['config'][6]['options'] = array(
 											);
 $modversion['config'][6]['default'] = 'dhtml';
 
+
+/**
+ * Allow html ?
+ */
+$modversion['config'][7]['name'] = 'url_rewriting';
+$modversion['config'][7]['title'] = '_MI_USERPAGE_URL_REWRITING';
+$modversion['config'][7]['description'] = '';
+$modversion['config'][7]['formtype'] = 'yesno';
+$modversion['config'][7]['valuetype'] = 'int';
+$modversion['config'][7]['default'] = 0;
 
 
 // Notifications

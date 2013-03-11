@@ -1,13 +1,26 @@
 <?php
 /**
  * ****************************************************************************
- * USERPAGE - MODULE FOR XOOPS
+ * userpage - MODULE FOR XOOPS
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * You may not change or alter any portion of this comment or credits
+ * of supporting developers from this source code or any supporting source code
+ * which is considered copyrighted (c) material of the original comment or credit authors.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package         userpage
+ * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *
+ * Version : $Id:
  * ****************************************************************************
  */
-
-require_once XOOPS_ROOT_PATH."/class/xoopsobject.php";
-require_once XOOPS_ROOT_PATH.'/modules/userpage/include/functions.php';
+require_once XOOPS_ROOT_PATH.'/class/xoopsobject.php';
+require_once XOOPS_ROOT_PATH.'/modules/userpage/include/common.php';
 
 class userpage extends XoopsObject
 {
@@ -47,21 +60,68 @@ class userpage extends XoopsObject
 	/**
  	 * Returns the user name for the current page (if the parameter is null)
  	 */
-	function uname($uid=0)
+	function uname($uid = 0)
 	{
 		global $xoopsConfig;
 		static $tblusers = array();
-		$option=-1;
+		$option = -1;
 		if(empty($uid)) {
-			$uid=$this->getVar('up_uid');
+			$uid = $this->getVar('up_uid');
 		}
 
 		if(is_array($tblusers) && array_key_exists($uid,$tblusers)) {
-			return 	$tblusers[$uid];
+			return $tblusers[$uid];
 		}
-		$tblusers[$uid]=XoopsUser::getUnameFromId($uid);
+		$tblusers[$uid] = XoopsUser::getUnameFromId($uid);
 		return $tblusers[$uid];
 	}
+
+	/**
+	 * Retourne l'URL de la page (en tenant compte des préférence d'url rewriting)
+	 * @return string	L'URL
+	 */
+	function getURL($shortVersion = false)
+	{
+		$url = '';
+		if(userpage_utils::getModuleOption('url_rewriting') == 1) {
+		    $url = 'page-'.$this->getVar('up_pageid').userpage_utils::makeSeoUrl($this->getVar('up_title')).'.html';
+		} else {
+			$url = 'index.php?page_id='.$this->getVar('up_pageid');
+		}
+	    if(!$shortVersion) {
+            $url = USERPAGE_URL.$url;
+        }
+		return $url;
+	}
+
+	/**
+	 * Retourne la chaine de caractères qui peut être utilisée dans l'attribut href d'une balise html A.
+	 *
+	 * @return string
+	 */
+	function getHrefTitle()
+	{
+		return userpage_utils::makeHrefTitle($this->getVar('up_title'));
+	}
+
+    /**
+     * Prepare data for display
+     *
+     * @param string $format
+     * @return array
+     */
+	function toArray($format = 's')
+    {
+		$ret = array();
+		foreach ($this->vars as $k => $v) {
+			$ret[$k] = $this->getVar($k, $format);
+		}
+		$ret['up_url_rewrited'] = $this->getURL();
+		$ret['up_href_title'] = $this->getHrefTitle();
+		$ret['up_created_formated'] = formatTimestamp($this->getVar('up_created'), userpage_utils::getModuleOption('dateformat'));
+		$ret['user_name'] = $this->uname();
+		return $ret;
+    }
 }
 
 
@@ -131,17 +191,30 @@ class UserpageuserpageHandler extends XoopsObjectHandler
 	}
 
 
+    /**
+     * Remove the specified object
+     *
+     * @param object $objet
+     * @param boolean $force
+     * @return boolean
+     */
 	function delete(&$objet, $force = false)
 	{
+	    global $xoopsModule;
 		if (get_class($objet) != 'userpage') {
 			return false;
 		}
-		$sql = sprintf("DELETE FROM %s WHERE up_pageid = %u", $this->db->prefix('userpage'), $objet->getVar('up_pageid'));
+		$up_pageid = $objet->getVar('up_pageid');
+		$sql = sprintf("DELETE FROM %s WHERE up_pageid = %u", $this->db->prefix('userpage'), $up_pageid);
 		if (false != $force) {
 			$result = $this->db->queryF($sql);
 		} else {
 			$result = $this->db->query($sql);
 		}
+		// Suppression des commentaires associés
+		$mid = $xoopsModule->getVar('mid');
+		xoops_comment_delete($mid, $up_pageid);
+
 		if (!$result) {
 			return false;
 		}

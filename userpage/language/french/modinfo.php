@@ -55,4 +55,7 @@ define("_MI_USERPAGE_FORM_HTMLAREA","HtmlArea Editor");
 define("_MI_USERPAGE_FORM_FCK","FCK Editor");
 define("_MI_USERPAGE_FORM_KOIVI","Koivi Editor");
 define("_MI_USERPAGE_FORM_TINYEDITOR","TinyEditor");
+
+// Added in version 1.3
+define("_MI_USERPAGE_URL_REWRITING","Use URL Rewriting?");
 ?>
