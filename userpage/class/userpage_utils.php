@@ -103,7 +103,7 @@ class userpage_utils
 	{
 		$x23 = false;
 		$xv = str_replace('XOOPS ','',XOOPS_VERSION);
-		if(substr($xv,2,1) == '3') {
+		if(intval(substr($xv,2,1)) >= 3) {
 			$x23 = true;
 		}
 		return $x23;

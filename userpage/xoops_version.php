@@ -24,7 +24,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 }
 
 $modversion['name'] = _MI_USERPAGE_NAME;
-$modversion['version'] = 1.4;
+$modversion['version'] = 1.5;
 $modversion['description'] = _MI_USERPAGE_DESC;
 $modversion['credits'] = "DefianceB0y, Riosoft, Shine, Gibaphp, Feichtl and Calidro (and all the others) for the quick translations !";
 $modversion['author'] = 'Instant Zero - http://xoops.instant-zero.com';
@@ -153,16 +153,10 @@ $modversion['config'][6]['title'] = '_MI_USERPAGE_OPT6';
 $modversion['config'][6]['description'] = '_MI_USERPAGE_OPT6_DSC';
 $modversion['config'][6]['formtype'] = 'select';
 $modversion['config'][6]['valuetype'] = 'text';
-$modversion['config'][6]['options'] = array(
-											_MI_USERPAGE_FORM_DHTML=>'dhtml',
-											_MI_USERPAGE_FORM_COMPACT=>'textarea',
-											_MI_USERPAGE_FORM_SPAW=>'spaw',
-											_MI_USERPAGE_FORM_HTMLAREA=>'htmlarea',
-											_MI_USERPAGE_FORM_KOIVI=>'koivi',
-											_MI_USERPAGE_FORM_FCK=>'fck',
-											_MI_USERPAGE_FORM_TINYEDITOR=>'tinyeditor'
-											);
 $modversion['config'][6]['default'] = 'dhtml';
+xoops_load('xoopseditorhandler');
+$modversion['config'][6]['options'] = array_flip(xoopsEditorHandler::getList());
+
 
 
 /**
