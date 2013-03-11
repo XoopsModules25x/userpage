@@ -1,28 +1,32 @@
 <?php
-/**
- * ****************************************************************************
- * SHORTCUTS - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * ****************************************************************************
- */
-define("_AM_SHORTCUT_STATS","Statistiques");
-define("_AM_SHORTCUT_STATS0","Nombre total de raccourcis : %d");
-define("_AM_SHORTCUT_STATS1","Top %d des pages visitées");
-define("_AM_SHORTCUT_STATS2","Pages les mieux notées");
-define("_AM_SHORTCUT_STATS3","Pages les plus mises en raccourcis");
-define("_AM_SHORTCUT_STATS4","Top %d des utilisateurs");
-define("_AM_SHORTCUT_PAGE","Page");
-define("_AM_SHORTCUT_VISITS","Visites");
-define("_AM_SHORTCUT_COUNT","Nombre");
-define("_AM_SHORTCUT_VOTE","Vote");
-define("_AM_SHORTCUT_USER","Utilisateur");
-define("_AM_SHORTCUT_USER_COUNT","Nombre de raccourcis");
-define("_AM_SHORTCUT_LATEST_SHORTCUTS","Dernières pages mises en raccourcis");
-define("_AM_SHORTCUT_DATE","Date");
+//  ------------------------------------------------------------------------ //
+//                      USERPAGE - MODULE FOR XOOPS 2                        //
+//                  Copyright (c) 2005-2006 Instant Zero                     //
+//                     <http://xoops.instant-zero.com/>                      //
+// ------------------------------------------------------------------------- //
+//  This program is free software; you can redistribute it and/or modify     //
+//  it under the terms of the GNU General Public License as published by     //
+//  the Free Software Foundation; either version 2 of the License, or        //
+//  (at your option) any later version.                                      //
+//                                                                           //
+//  You may not change or alter any portion of this comment or credits       //
+//  of supporting developers from this source code or any supporting         //
+//  source code which is considered copyrighted (c) material of the          //
+//  original comment or credit authors.                                      //
+//                                                                           //
+//  This program is distributed in the hope that it will be useful,          //
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
+//  GNU General Public License for more details.                             //
+//                                                                           //
+//  You should have received a copy of the GNU General Public License        //
+//  along with this program; if not, write to the Free Software              //
+//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
+//  ------------------------------------------------------------------------ //
 
-define('_AM_SHORTCUTS_UPGRADEFAILED','La mise à jour à échouée');
-define('_AM_SHORTCUTS_UPGRADEFAILED21',"Impossible d'ajuoter les nouveaux champs à la table shortcuts");
-define('_AM_SHORTCUTS_UPGRADEFAILED0',"Veuillez noter les mesages et essayer de corriger le prolème avec par exemple phpMyadmin et la définition sql de la table disponible dans le répertoire 'sql' du module");
-define('_AM_SHORTCUTS_UPGRADECOMPLETE','Mise à jour terminée');
-define('_AM_SHORTCUTS_UPGR_ACCESS_ERROR',"Erreur, pour utiliser le script de mise à jour, vous devez être un administrateur du module");
+define('_AM_USERPAGE_STATS',"Il y a %u page(s) sur votre site");
+
+define("_AM_USERPAGE_GENERALSET", "Options du module" );
+define("_AM_USERPAGE_GOTOMOD","Aller au module");
+define("_AM_USERPAGE_MODULEADMIN","Administration du module");
 ?>

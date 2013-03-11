@@ -1,47 +1,59 @@
 <?php
-/**
- * ****************************************************************************
- * SHORTCUTS - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * ****************************************************************************
- */
-define('_MI_SHORTCUTS_NAME','Shortcuts');
-define('_MI_SHORTCUTS_DESC','Enable users to manage internals shortcuts');
-define('_MI_SHORTCUTS_BNAME1','Shortcuts');
-define('_MI_SHORTCUTS_BNAME1_DESC','Show, add and delete shortcuts');
+//  ------------------------------------------------------------------------ //
+//                      USERPAGE - MODULE FOR XOOPS 2                        //
+//                  Copyright (c) 2005-2006 Instant Zero                     //
+//                     <http://xoops.instant-zero.com/>                      //
+// ------------------------------------------------------------------------- //
+//  This program is free software; you can redistribute it and/or modify     //
+//  it under the terms of the GNU General Public License as published by     //
+//  the Free Software Foundation; either version 2 of the License, or        //
+//  (at your option) any later version.                                      //
+//                                                                           //
+//  You may not change or alter any portion of this comment or credits       //
+//  of supporting developers from this source code or any supporting         //
+//  source code which is considered copyrighted (c) material of the          //
+//  original comment or credit authors.                                      //
+//                                                                           //
+//  This program is distributed in the hope that it will be useful,          //
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
+//  GNU General Public License for more details.                             //
+//                                                                           //
+//  You should have received a copy of the GNU General Public License        //
+//  along with this program; if not, write to the Free Software              //
+//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
+//  ------------------------------------------------------------------------ //
 
-// Module's options
-define('_MI_SHORTCUTS_OPT1','Maximum number of shortcuts per user');
-define('_MI_SHORTCUTS_OPT1_DSC','You can limit the number of shortcuts per user. Let it to 0 for no limits');
-define('_MI_SHORTCUTS_OPT2','Record hits');
-define('_MI_SHORTCUTS_OPT2_DSC','If you want, you can record link\'s hits');
-define('_MI_SHORTCUTS_OPT3','Limit titles length ?');
-define('_MI_SHORTCUTS_OPT3_DSC',"You can limit the links title's length so that it does not break your theme (0= no limit)");
-define('_MI_SHORTCUTS_OPT4','Enable users to rank links ?');
-define('_MI_SHORTCUTS_OPT4_DSC',"");
-define('_MI_SHORTCUTS_OPT5','Number of pages to count in the statistics');
-define('_MI_SHORTCUTS_OPT5_DSC',"");
+define('_MI_USERPAGE_NAME',"UserPage");
+define('_MI_USERPAGE_DESC',"Enable your registred users to create their own page");
+define('_MI_USERPAGE_ADMMENU1',"Statistics");
+define('_MI_USERPAGE_OPT0',"Enable html ?");
+define('_MI_USERPAGE_OPT0_DSC',"Select if users can use html");
+define('_MI_USERPAGE_OPT1',"Enable RSS Feed ?");
+define('_MI_USERPAGE_OPT1_DSC',"");
+define('_MI_USERPAGE_OPT3',"Date's format");
+define('_MI_USERPAGE_OPT3_DSC',"See the <a href='http://fr3.php.net/manual/fr/function.date.php'>Php</a> date function for more informations");
+define('_MI_USERPAGE_OPT4',"Number of characters to display in RSS Feed ?");
+define('_MI_USERPAGE_OPT4_DSC',"Select the number of visible characters in the RSS Feed");
+define('_MI_USERPAGE_OPT5',"Number of lines per page (in the pages listing)");
+define('_MI_USERPAGE_OPT5_DSC',"Select the number of lines in the user side");
+//define('_MI_USERPAGE_OPT6',"Use kiovi ?");
+// Changed in version 1.1
+define('_MI_USERPAGE_OPT6',"Editor to use ?");
+//define('_MI_USERPAGE_OPT6_DSC',"If you set this option to true, don't forget to set the first option (Enable html) to true too");
+// Changed in version 1.1
+define('_MI_USERPAGE_OPT6_DSC',"Select the editor to use and if necessary, don't forget to set the first option (Enable html) to true");
+define('_MI_USERPAGE_BNAME1',"Last created pages");
+define('_MI_USERPAGE_BNAME2',"Most viewed pages");
+define('_MI_USERPAGE_BNAME3',"Random pages");
+define('_MI_USERPAGE_MENU1',"Pages List");
 
-// Admin's menu
-define('_MI_SHORTCUTS_ADMIN_MENU1',"Statistics");
-
-// Added in 1.3 Beta 2
-define('_MI_SHORTCUTS_OPT6',"List sort order");
-define('_MI_SHORTCUTS_OPT6_DSC',"Select the items order in the url's list");
-define('_MI_SHORTCUTS_OPT6_1',"Date");
-define('_MI_SHORTCUTS_OPT6_2',"Title");
-define('_MI_SHORTCUTS_OPT6_3',"Url");
-define('_MI_SHORTCUTS_OPT6_4',"Rating");
-define('_MI_SHORTCUTS_OPT7',"Use Xoops redirections ?");
-define('_MI_SHORTCUTS_OPT7_DSC',"By default, when a user select an url from his list, the script displays a message while redirecting him to the url");
-
-// Added in version 1.4
-define('_MI_SHORTCUTS_BNAME2','Shows most visited pages');
-define('_MI_SHORTCUTS_BNAME2_DESC','');
-
-define('_MI_SHORTCUTS_BNAME3','Shows best rated pages');
-define('_MI_SHORTCUTS_BNAME3_DESC','');
-
-define('_MI_SHORTCUTS_BNAME4','Shows most recent pages');
-define('_MI_SHORTCUTS_BNAME4_DESC','');
+// Added in version 1.1
+define("_MI_USERPAGE_FORM_COMPACT","Compact");
+define("_MI_USERPAGE_FORM_DHTML","DHTML");
+define("_MI_USERPAGE_FORM_SPAW","Spaw Editor");
+define("_MI_USERPAGE_FORM_HTMLAREA","HtmlArea Editor");
+define("_MI_USERPAGE_FORM_FCK","FCK Editor");
+define("_MI_USERPAGE_FORM_KOIVI","Koivi Editor");
+define("_MI_USERPAGE_FORM_TINYEDITOR","TinyEditor");
 ?>

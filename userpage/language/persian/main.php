@@ -1,9 +1,9 @@
 <?php
 //  ------------------------------------------------------------------------ //
-//                XOOPS - PHP Content Management System                      //
-//                    Copyright (c) 2000 XOOPS.org                           //
-//                       <http://www.xoops.org/>                             //
-//  ------------------------------------------------------------------------ //
+//                      USERPAGE - MODULE FOR XOOPS 2                        //
+//                  Copyright (c) 2005-2006 Hervé Thouzard                   //
+//                     <http://www.herve-thouzard.com/>                      //
+// ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
 //  the Free Software Foundation; either version 2 of the License, or        //
@@ -23,26 +23,31 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-// Author : Hervé Thouzard (http://www.herve-thouzard.com)
-define("_SHORTCUTS_PGTITLE1","اضافه کردن یک لینک سریع");
-define("_SHORTCUTS_REACHLIMIT","متاسفانه شما به تعداد %d لینک سریع که وب مستر برای کاربران تعریف کرده است رسیده اید");
-define("_SHORTCUTS_REGISTRED","متاسفانه این ماژول فقط برای کاربران عضو در نظر گرفته شده است");
-define("_SHORTCUTS_URLEXIST","این آدرس در حال حاضر در لینک های سریع شما وجود دارد. آیا میخواهید آن را حذف کنید؟ یا ویرایش کنید؟ یا از این عمل انصراف دهید؟");
-define("_SHORTCUTS_URL","آدرس");
-define("_SHORTCUTS_ADD_URL","اضافه کردن آدرس");
-define("_SHORTCUTS_ADD_OK","آدرس با موفقیت به پایگاه داده اضافه شد");
-define("_SHORTCUTS_ADD_PROBLEM","خطایی در هنگام اضافه کردن آدرس به پایگاه داده رخ داد");
-define("_SHORTCUTS_DELETE_OK","آدرس با موفقیت از پایگاه داده حذف شد");
-define("_SHORTCUTS_DELETE_PROBLEM","خطا در هنگام حذف کردن آدرس از پایگاه داده رخ داد");
-define("_SHORTCUTS_ADD_ERROR","لطفا یک نام برای آدرس بنویسید");
-define("_SHORTCUTS_LIST","در اینجا فهرستی از لینک های سریع شما قرار دارد");
-define("_SHORTCUTS_MANAGEMENTS","مدیریت لینک های سریع");
-define("_SHORTCUTS_DATE","تاریخ");
-define("_SHORTCUTS_TITLE","نام");
-define("_SHORTCUTS_MODIFY","اصلاح");
-define("_SHORTCUTS_HITS","تعداد بازدید");
-define("_SHORTCUTS_ACTION","عمل");
-define("_SHORTCUTS_CONFDELETE","آیا اطمینان دارید؟");
-define("_SHORTCUTS_ADD_AN_ENTRY","لطفا ابتدا یک لینک سریع وارد کنید");
-define("_SHORTCUTS_RATING","ارزش گذاری");
+define("_USERPAGE_TITLE","عنوان");
+define("_USERPAGE_CONTENT","متن");
+define("_USERPAGE_CREATION_DATE","نوشته شده در تاریخ: ");
+define("_USERPAGE_HITS","تعداد بازدید");
+define("_USERPAGE_EDIT","ویرایش");
+define("_USERPAGE_PRINTABLE","نسخه سازگار با چاپگر");
+define("_USERPAGE_PDF","نسخه PDF");
+define("_USERPAGE_EMAIL","این صفحه را برای یک دوست بفرست");
+define("_USERPAGE_YOUR_PAGE","صفحه شما");
+define("_USERPAGE_RSS_FEED","RSS Feed");
+define("_USERPAGE_INTARTICLE","صفحه جالب در %s");
+define("_USERPAGE_INTARTFOUND","این یه صفحه جالبه که من در سایت %s پیدا کردم");
+define("_USERPAGE_EMPTY_PAGE","صفحه خالی است");
+define("_USERPAGE_DB_OK","پایگاه داده به روز شد");
+define("_USERPAGE_DB_PB", "خطا در هنگام به روز شدن پایگاه داده");
+define("_USERPAGE_PAGE_NOT_FOUND","صفحه پیدا نشد");
+define("_USERPAGE_PAGE_OF","صفحه ");
+define("_USERPAGE_THISCOMESFROM","این صفحه از سایت %s آدرس داده شده است");
+define("_USERPAGE_URLFORPAGE","آدرس این صفحه:");
+define("_USERPAGE_BOOK","فهرست صفحه ها");
+define("_USERPAGE_USER","کاربر");
+define("_USERPAGE_DATE","تاریخ");
+define('_USERPAGE_PDF_PAGE',"صفحه");
+define('_USERPAGE_POSTEDON',"ارسال شده در تاریخ : ");
+// Added in version 1.2
+define('_USERPAGE_ARE_YOU_SURE',"آیا اطمینان دارید؟");
+define('_USERPAGE_VIEW',"بازدید");
 ?>

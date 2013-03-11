@@ -1,30 +1,54 @@
 <?php
-/**
- * ****************************************************************************
- * SHORTCUTS - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * ****************************************************************************
- */
+//  ------------------------------------------------------------------------ //
+//                      USERPAGE - MODULE FOR XOOPS 2                        //
+//                  Copyright (c) 2005-2006 Instant Zero                     //
+//                     <http://xoops.instant-zero.com/>                      //
+// ------------------------------------------------------------------------- //
+//  This program is free software; you can redistribute it and/or modify     //
+//  it under the terms of the GNU General Public License as published by     //
+//  the Free Software Foundation; either version 2 of the License, or        //
+//  (at your option) any later version.                                      //
+//                                                                           //
+//  You may not change or alter any portion of this comment or credits       //
+//  of supporting developers from this source code or any supporting         //
+//  source code which is considered copyrighted (c) material of the          //
+//  original comment or credit authors.                                      //
+//                                                                           //
+//  This program is distributed in the hope that it will be useful,          //
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
+//  GNU General Public License for more details.                             //
+//                                                                           //
+//  You should have received a copy of the GNU General Public License        //
+//  along with this program; if not, write to the Free Software              //
+//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
+//  ------------------------------------------------------------------------ //
+define("_USERPAGE_TITLE","Titre");
+define("_USERPAGE_CONTENT","Contenu");
+define("_USERPAGE_CREATION_DATE","Date de création : ");
+define("_USERPAGE_HITS","Vues");
+define("_USERPAGE_EDIT","Editer");
+define("_USERPAGE_PRINTABLE","Version imprimable");
+define("_USERPAGE_PDF","Version PDF");
+define("_USERPAGE_EMAIL","En parler à un ami");
+define("_USERPAGE_YOUR_PAGE","Votre page");
+define("_USERPAGE_RSS_FEED","Flux RSS");
+define("_USERPAGE_INTARTICLE","Page int&eacute;ressante sur %s");
+define("_USERPAGE_INTARTFOUND","Voici une page int&eacute;ressante trouv&eacute; sur %s");
+define("_USERPAGE_EMPTY_PAGE","La page est vide");
+define("_USERPAGE_DB_OK","Mise &agrave; jour de la base de donn&eacute;es avec succ&egrave;s");
+define("_USERPAGE_DB_PB", "Erreur pendant la mise à jour de la base de donn&eacute;es" );
+define("_USERPAGE_PAGE_NOT_FOUND","Page introuvable");
+define("_USERPAGE_PAGE_OF","Page de ");
+define("_USERPAGE_THISCOMESFROM","Cette page provient de %s");
+define("_USERPAGE_URLFORPAGE","Retrouvez cette page sur : ");
+define("_USERPAGE_BOOK","Liste des pages");
+define("_USERPAGE_USER","Utilisateur");
+define("_USERPAGE_DATE","Date");
+define('_USERPAGE_PDF_PAGE',"Page");
+define('_USERPAGE_POSTEDON',"Publi&eacute; le : ");
 
-define("_SHORTCUTS_PGTITLE1","Ajouter un raccourcis à la liste");
-define("_SHORTCUTS_REACHLIMIT","Désolé mais vous avez atteind la limite de %d raccourcis définie par le webmaster.");
-define("_SHORTCUTS_REGISTRED","Désolé mais ce module est réservé aux utilisateurs enregistrés.");
-define("_SHORTCUTS_URLEXIST","Cette page est déjà présente dans votre liste, souhaitez vous la supprimer, l'éditer ou revenir en arrière ?");
-define("_SHORTCUTS_URL","Adresse");
-define("_SHORTCUTS_ADD_URL","Ajouter Url");
-define("_SHORTCUTS_ADD_OK","La page a été ajoutée avec succès à la base de données");
-define("_SHORTCUTS_ADD_PROBLEM","Il y a eu un problème pendant l'ajout dans la base de données");
-define("_SHORTCUTS_DELETE_OK","La page a été supprimée avec succès");
-define("_SHORTCUTS_DELETE_PROBLEM","Erreur pendant la suppression de la page");
-define("_SHORTCUTS_ADD_ERROR","Veuillez spécifier un titre");
-define("_SHORTCUTS_LIST","Liste de vos raccourcis");
-define("_SHORTCUTS_MANAGEMENTS","Gestion des raccourcis");
-define("_SHORTCUTS_DATE","Date");
-define("_SHORTCUTS_TITLE","Titre");
-define("_SHORTCUTS_MODIFY","Modifer");
-define("_SHORTCUTS_HITS","Clics");
-define("_SHORTCUTS_ACTION","Action");
-define("_SHORTCUTS_CONFDELETE","Etes vous certain(e) ?");
-define("_SHORTCUTS_ADD_AN_ENTRY","Veuillez commencer par ajouter une page");
-define("_SHORTCUTS_RATING","Note");
+// Added in version 1.2
+define('_USERPAGE_ARE_YOU_SURE',"Etes vous certain(e) ?");
+define('_USERPAGE_VIEW',"Visualiser");
 ?>

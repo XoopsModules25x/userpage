@@ -1,9 +1,9 @@
 <?php
 //  ------------------------------------------------------------------------ //
-//                XOOPS - PHP Content Management System                      //
-//                    Copyright (c) 2000 XOOPS.org                           //
-//                       <http://www.xoops.org/>                             //
-//  ------------------------------------------------------------------------ //
+//                      USERPAGE - MODULE FOR XOOPS 2                        //
+//                  Copyright (c) 2005-2006 Hervé Thouzard                   //
+//                     <http://www.herve-thouzard.com/>                      //
+// ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
 //  the Free Software Foundation; either version 2 of the License, or        //
@@ -23,25 +23,9 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-// Author : Hervé Thouzard (http://www.herve-thouzard.com)
-define("_AM_SHORTCUT_STATS","آمار");
-define("_AM_SHORTCUT_STATS0","تمام لینک های سریع : %d");
-define("_AM_SHORTCUT_STATS1","%d صفحه بیشتر بازدید شده");
-define("_AM_SHORTCUT_STATS2","صفحه های با ارزش بالاتر");
-define("_AM_SHORTCUT_STATS3","صفحه هایی که بیشتر به عنوان لینک سریع قرار گرفته اند");
-define("_AM_SHORTCUT_STATS4","%d کاربری که بیشترین تعداد لینک سریع را استفاده کرده اند");
-define("_AM_SHORTCUT_PAGE","صفحه");
-define("_AM_SHORTCUT_VISITS","بازدید");
-define("_AM_SHORTCUT_COUNT","تعداد");
-define("_AM_SHORTCUT_VOTE","ارزش");
-define("_AM_SHORTCUT_USER","کاربر");
-define("_AM_SHORTCUT_USER_COUNT","تعداد لینک های سریع");
-define("_AM_SHORTCUT_LATEST_SHORTCUTS","آخرین صفحه هایی که به عنوان لینک سریع قرار گرفته");
-define("_AM_SHORTCUT_DATE","تاریخ");
 
-define('_AM_SHORTCUTS_UPGRADEFAILED','ارتقا با خطا روبرو شد');
-define('_AM_SHORTCUTS_UPGRADEFAILED21',"ناتوانی در اضافه کردن فیلد جدید به جدول ماژول لینک های سریع");
-define('_AM_SHORTCUTS_UPGRADEFAILED0',"Please note the messages and try to correct the problems with phpMyadmin and the sql definition's file available in the 'sql' folder of the shortcuts module");
-define('_AM_SHORTCUTS_UPGRADECOMPLETE','ارتقا با موفقیت انجام شد');
-define('_AM_SHORTCUTS_UPGR_ACCESS_ERROR',"خطا برای استفاده از اسکریپت ارتقا شما باید مدیر این ماژول باشید");
+define('_AM_USERPAGE_STATS'," %u صفحه در سایت وجود دارد");
+define("_AM_USERPAGE_GENERALSET", "گزینه های ماژول" );
+define("_AM_USERPAGE_GOTOMOD","برو به ماژول");
+define("_AM_USERPAGE_MODULEADMIN","مدیریت ماژول");
 ?>

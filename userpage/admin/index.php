@@ -1,121 +1,111 @@
 <?php
 /**
  * ****************************************************************************
- * SHORTCUTS - MODULE FOR XOOPS
+ * USERPAGE - MODULE FOR XOOPS
  * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
  * ****************************************************************************
  */
 
 require_once '../../../include/cp_header.php';
-require_once XOOPS_ROOT_PATH.'/modules/shortcuts/include/functions.php';
+require_once XOOPS_ROOT_PATH.'/modules/userpage/admin/functions.php';
+require_once XOOPS_ROOT_PATH.'/modules/userpage/include/functions.php';
+require_once XOOPS_ROOT_PATH.'/class/pagenav.php';
 
 
-xoops_cp_header();
-// Get the module's options
-$userscount = st_getmoduleoption('statsnumber');;
-$enablerating = st_getmoduleoption('enablerating');
-$savehits = st_getmoduleoption('savehits');
-
-$shortcuts_handler =& xoops_getmodulehandler('shortcuts', 'shortcuts');
-
-echo '<h1>'._AM_SHORTCUT_STATS."</h1>\n";
-
-$start = 0;
-
-// Total number of shortcuts
-printf('<br /><h4>'._AM_SHORTCUT_STATS0.'</h4>',$shortcuts_handler->getCount());
-if($savehits) {
-	printf("<div style='text-align: center;'><b>"._AM_SHORTCUT_STATS1.'</b><br />',$userscount);
-	echo "<table width='100%' cellspacing='1' cellpadding='3' border='0' class='outer'><tr>";
-	echo "<th align='center'>"._AM_SHORTCUT_PAGE."</th>";
-	echo "<th align='center'>"._AM_SHORTCUT_VISITS."</th>";
-	echo "</tr>\n";
-	$start = 0;
-	$critere=new Criteria('1', '1','=');
-	$critere->setLimit($userscount);
-	$critere->setStart($start);
-	$critere->setSort('hits');
-	$critere->setOrder('DESC');
-	$tblshortcuts = $shortcuts_handler->getObjects($critere);
-	foreach($tblshortcuts as $one_shortcut) {
-		$url = XOOPS_URL.$one_shortcut->getVar('url');
-		printf("<tr><td align='left'><a href='%s' target ='_blank'>%s</a></td><td align='right'>%u</td></tr>\n",$url,$url,$one_shortcut->getVar('hits'));
-	}
-	echo "</table></div><br />\n";
+// ********************************************************************************************************************
+// **** Main
+// ********************************************************************************************************************
+$op = 'default';
+if(isset($_POST['op'])) {
+ $op=$_POST['op'];
+} elseif(isset($_GET['op'])) {
+	$op=$_GET['op'];
 }
+$userpage_handler =& xoops_getmodulehandler('userpage', 'userpage');
 
+switch ($op) {
+	/**
+ 	 * Default action, show statistics and a listing of all the pages
+ 	 */
+	case 'stats':
+	default:
+        xoops_cp_header();
+        userpage_adminmenu(0);
 
+		if (file_exists(XOOPS_ROOT_PATH.'/language/'.$xoopsConfig['language'].'/admin.php')) {
+			require_once XOOPS_ROOT_PATH.'/language/'.$xoopsConfig['language'].'/admin.php';
+		} else {
+			require_once XOOPS_ROOT_PATH.'/modules/userpage/language/english/main.php';
+		}
 
-// Most bookmarked urls
-printf("<div style='text-align: center;'><b>"._AM_SHORTCUT_STATS3.'</b><br />',$userscount);
-echo "<table width='100%' cellspacing='1' cellpadding='3' border='0' class='outer'><tr><th align='center'>"._AM_SHORTCUT_PAGE."</th><th align='center'>"._AM_SHORTCUT_COUNT."</th></tr>";
-$critere=new Criteria('1', '1','=');
-$critere->setLimit($userscount);
-$critere->setStart($start);
-$critere->setSort('cpt');
-$critere->setOrder('DESC');
-$critere->setGroupby('url');
-$tblshortcuts = $shortcuts_handler->getObjects2('count(shortcutid) as cpt, url as lib',$critere);
-foreach($tblshortcuts as $one_shortcut) {
-	$url = XOOPS_URL.$one_shortcut['lib'];
-	printf("<tr><td align='left'><a href='%s' target ='_blank'>%s</a></td><td align='right'>%u</td></tr>\n",$url,$url,$one_shortcut['cpt']);
+		if (file_exists(XOOPS_ROOT_PATH.'/modules/userpage/language/'.$xoopsConfig['language'].'/main.php')) {
+			require_once XOOPS_ROOT_PATH.'/modules/userpage/language/'.$xoopsConfig['language'].'/main.php';
+		} else {
+			require_once XOOPS_ROOT_PATH.'/modules/userpage/language/english/main.php';
+		}
+        $totalcount = $userpage_handler->getCount();	// Pages count
+		echo '<h4>'.sprintf(_AM_USERPAGE_STATS,$totalcount).'</h4>';
+		$limit = userpage_getmoduleoption('linesperpage');
+		$start = isset($_GET['start']) ? intval($_GET['start']) : 0;
+		$critere = new Criteria('1', '1','=');
+		$critere->setLimit($limit);
+		$critere->setStart($start);
+		// tip, replace "up_created" with "up_uid" if you want to sort by user and not by date
+		$critere->setSort('up_created');
+		$critere->setOrder('DESC');
+		$pagescount = $userpage_handler->getCount();
+		$pagenav = new XoopsPageNav($pagescount, $limit , $start, 'start', 'op=list');
+		$pages = array();
+		$pages = $userpage_handler->getObjects($critere);
+		echo "<div align='right'>".$pagenav->renderNav().'</div><br />';
+		echo "<table width='100%' cellspacing='1' cellpadding='3' border='0' class='outer'>";
+		echo '<tr>';
+		echo '<th align="center">'._USERPAGE_USER.'</th>';
+		echo '<th align="center">'._USERPAGE_TITLE.'</th>';
+		echo '<th align="center">'._USERPAGE_DATE.'</th>';
+		echo '<th align="center">'._USERPAGE_HITS.'</th>';
+		echo '<th align="center">'._AD_ACTION.'</th>';
+		echo '</tr>';
+		$class='';
+		$allowhtml = userpage_getmoduleoption('allowhtml');
+		foreach($pages as $page) {
+			$class = ($class == 'even') ? 'odd' : 'even';
+			$page->setVar('dohtml',$allowhtml);
+			echo "<tr class='".$class."'>";
+			echo '<td>'.$page->uname().'</td>';
+			echo "<td><a href=\"".XOOPS_URL."/modules/userpage/index.php?page_id=".$page->getVar('up_pageid')."\">".$page->getVar('up_title')."</a></td>";
+			echo "<td align=\"center\">".formatTimestamp($page->getVar('up_created'),userpage_getmoduleoption('dateformat'))."</td>";
+			echo "<td align=\"center\">".$page->getVar('up_hits')."</td>";
+			$del_action = "<a title='"._DELETE."' href='index.php?op=delete&id=".$page->getVar('up_pageid')."' ".userpage_JavascriptLinkConfirm(_USERPAGE_ARE_YOU_SURE)." ><img src='../images/delete.gif' alt='"._DELETE."' border='0' /></a>";
+			$view_action = "<a target='_blank' title='"._USERPAGE_VIEW."' href='".XOOPS_URL."/modules/userpage/index.php?page_id=".$page->getVar('up_pageid')."'><img src='../images/view.gif' alt='"._USERPAGE_VIEW."' border='0' /></a>";
+			echo "<td align=\"center\">".$del_action.' '.$view_action.'</td>';
+			echo "</tr>";
+		}
+		echo '</table>';
+        echo "<div align='right'>".$pagenav->renderNav().'</div><br />';
+		echo "<br /><div align='center'><a href='http://xoops.instant-zero.com' target='_blank'><img src='../images/instantzero.gif'></a></div>";
+		break;
+
+	/**
+	 * Remove a specific page
+	 */
+	case 'delete':
+		$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+		$res = false;
+		if($id>0) {
+			$page = $userpage_handler->get($id);
+			if(is_object($page)) {
+				$res = $userpage_handler->delete($page, true);
+			}
+		}
+		if($res) {
+			redirect_header('index.php', 2, _USERPAGE_DB_OK);
+			exit();
+		} else {
+			redirect_header('index.php', 4, _ERRORS);
+			exit();
+		}
+		break;
 }
-echo "</table></div><br />\n";
-
-
-
-// Best rated pages
-printf("<div style='text-align: center;'><b>"._AM_SHORTCUT_STATS2.'</b><br />',$userscount);
-echo "<table width='100%' cellspacing='1' cellpadding='3' border='0' class='outer'><tr><th align='center'>"._AM_SHORTCUT_PAGE."</th><th align='center'>"._AM_SHORTCUT_VOTE."</th></tr>";
-$critere=new Criteria('1', '1','=');
-$critere->setLimit($userscount);
-$critere->setStart($start);
-$critere->setSort('rating');
-$critere->setOrder('DESC');
-$tblshortcuts = $shortcuts_handler->getObjects($critere);
-foreach($tblshortcuts as $one_shortcut) {
-	$url = XOOPS_URL.$one_shortcut->getVar('url');
-	printf("<tr><td align='left'><a href='%s' target ='_blank'>%s</a></td><td align='right'>%u</td></tr>\n",$url,$url,$one_shortcut->getVar('rating'));
-}
-echo "</table></div><br />\n";
-
-
-// Users Top
-printf("<div style='text-align: center;'><b>"._AM_SHORTCUT_STATS4.'</b><br />',$userscount);
-echo "<table width='100%' cellspacing='1' cellpadding='3' border='0' class='outer'><tr><th align='center'>"._AM_SHORTCUT_USER."</th><th align='center'>"._AM_SHORTCUT_USER_COUNT."</th></tr>";
-$critere=new Criteria('1', '1','=');
-$critere->setLimit($userscount);
-$critere->setStart($start);
-$critere->setSort('cpt');
-$critere->setOrder('DESC');
-$critere->setGroupby('uid');
-$tmpshortcut = $shortcuts_handler->create();
-$tblshortcuts = $shortcuts_handler->getObjects2('count(uid) as cpt, uid as lib',$critere);
-foreach($tblshortcuts as $one_shortcut) {
-	$url = XOOPS_URL.$one_shortcut['lib'];
-	printf("<tr><td align='left'><a href='%s' target ='_blank'>%s</a></td><td align='right'>%u</td></tr>\n",$url,$tmpshortcut->uname($one_shortcut['lib']),$one_shortcut['cpt']);
-}
-echo "</table></div><br />\n";
-
-
-// Latest shortcuts
-printf("<div style='text-align: center;'><b>"._AM_SHORTCUT_LATEST_SHORTCUTS.'</b><br />',$userscount);
-echo "<table width='100%' cellspacing='1' cellpadding='3' border='0' class='outer'><tr><th align='center'>"._AM_SHORTCUT_USER."</th><th align='center'>"._AM_SHORTCUT_PAGE."</th><th>"._AM_SHORTCUT_DATE."</th></tr>";
-$critere=new Criteria('1', '1','=');
-$critere->setLimit($userscount);
-$critere->setStart($start);
-$critere->setSort('date');
-$critere->setOrder('DESC');
-$tblshortcuts = $shortcuts_handler->getObjects($critere);
-foreach($tblshortcuts as $one_shortcut) {
-	$url2 = XOOPS_URL.$one_shortcut->getVar('url');
-	$url=XOOPS_URL."/userinfo.php?uid=".$one_shortcut->getVar('uid');
-	$date=formatTimestamp($one_shortcut->getVar('date'));
-	printf("<tr><td align='left'><a href='%s' target ='_blank'>%s</a></td><td align='left'><a href='%s' target ='_blank'>%s</a></td><td align='center'>%s</td></tr>\n",$url,$one_shortcut->uname(),$url2,$url2,$date);
-}
-echo "</table></div><br />\n";
-
-
-echo "<br /><br /><table width='100%' cellspacing='1' cellpadding='3' border='0'><tr><td align='center'><a href='http://xoops.instant-zero.com' target='_blank'><img src='../images/instantzero.gif'></a></td></tr></table>";
 xoops_cp_footer();
 ?>

@@ -1,21 +1,28 @@
 <?php
-/**
- * ****************************************************************************
- * SHORTCUTS - MODULE FOR XOOPS
- * Copyright (c) Herv� Thouzard of Instant Zero (http://www.instant-zero.com)
- * ****************************************************************************
- */
-define("_SHORTCUT_ADD_CURRENT_URL","این ص�?حه را اضا�?ه کن");
-define("_SHORTCUT_VIEW_SHORTCUT","برو به این ص�?حه");
-define("_SHORTCUT_EDIT_SHORTCUTS","ویرایش لینک های سریع");
-define("_SHORTCUT_DISPLAY_LAYOUT","چگونگی نمایش");
-define("_SHORTCUT_DISPLAY_1","Combo box");
-define("_SHORTCUT_DISPLAY_2","Unordered list");
-define("_SHORTCUT_DISPLAY_3","Contextual menu");
-define("_SHORTCUT_DISPLAY_4","Horizontal scroll");
-define("_SHORTCUT_DISPLAY_5","Vertical scroll");
-
-// Added in version 1.4
-define("_SHORTCUT_INFORMATION_TO_DISPLAY","Information to display");
-define("_SHORTCUT_ELEMENTS_TO_DISPLAY","Elements to display");
+//  ------------------------------------------------------------------------ //
+//                      USERPAGE - MODULE FOR XOOPS 2                        //
+//                  Copyright (c) 2005-2006 Hervé Thouzard                   //
+//                     <http://www.herve-thouzard.com/>                      //
+// ------------------------------------------------------------------------- //
+//  This program is free software; you can redistribute it and/or modify     //
+//  it under the terms of the GNU General Public License as published by     //
+//  the Free Software Foundation; either version 2 of the License, or        //
+//  (at your option) any later version.                                      //
+//                                                                           //
+//  You may not change or alter any portion of this comment or credits       //
+//  of supporting developers from this source code or any supporting         //
+//  source code which is considered copyrighted (c) material of the          //
+//  original comment or credit authors.                                      //
+//                                                                           //
+//  This program is distributed in the hope that it will be useful,          //
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
+//  GNU General Public License for more details.                             //
+//                                                                           //
+//  You should have received a copy of the GNU General Public License        //
+//  along with this program; if not, write to the Free Software              //
+//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
+//  ------------------------------------------------------------------------ //
+define("_MB_USERPAGE_ITEMS_COUNT","تعداد مواردی که نشان داده میشوند");
+define("_MB_USERPAGE_TITLES_LENGTH","طول عنوان");
 ?>

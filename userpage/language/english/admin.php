@@ -1,28 +1,31 @@
 <?php
-/**
- * ****************************************************************************
- * SHORTCUTS - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * ****************************************************************************
- */
-define("_AM_SHORTCUT_STATS","Statistics");
-define("_AM_SHORTCUT_STATS0","Total number of shortcuts : %d");
-define("_AM_SHORTCUT_STATS1","Top %d visited pages");
-define("_AM_SHORTCUT_STATS2","Best rated pages");
-define("_AM_SHORTCUT_STATS3","Most bookmarked pages");
-define("_AM_SHORTCUT_STATS4","Users Top %d");
-define("_AM_SHORTCUT_PAGE","Page");
-define("_AM_SHORTCUT_VISITS","Visits");
-define("_AM_SHORTCUT_COUNT","Count");
-define("_AM_SHORTCUT_VOTE","Vote");
-define("_AM_SHORTCUT_USER","User");
-define("_AM_SHORTCUT_USER_COUNT","Number of Shortcuts");
-define("_AM_SHORTCUT_LATEST_SHORTCUTS","Latest bookmarked pages");
-define("_AM_SHORTCUT_DATE","Date");
+//  ------------------------------------------------------------------------ //
+//                      USERPAGE - MODULE FOR XOOPS 2                        //
+//                  Copyright (c) 2005-2006 Instant Zero                     //
+//                     <http://xoops.instant-zero.com/>                      //
+// ------------------------------------------------------------------------- //
+//  This program is free software; you can redistribute it and/or modify     //
+//  it under the terms of the GNU General Public License as published by     //
+//  the Free Software Foundation; either version 2 of the License, or        //
+//  (at your option) any later version.                                      //
+//                                                                           //
+//  You may not change or alter any portion of this comment or credits       //
+//  of supporting developers from this source code or any supporting         //
+//  source code which is considered copyrighted (c) material of the          //
+//  original comment or credit authors.                                      //
+//                                                                           //
+//  This program is distributed in the hope that it will be useful,          //
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
+//  GNU General Public License for more details.                             //
+//                                                                           //
+//  You should have received a copy of the GNU General Public License        //
+//  along with this program; if not, write to the Free Software              //
+//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
+//  ------------------------------------------------------------------------ //
 
-define('_AM_SHORTCUTS_UPGRADEFAILED','Upgrade Failed');
-define('_AM_SHORTCUTS_UPGRADEFAILED21',"Impossible to add the new fields to the shortcuts table");
-define('_AM_SHORTCUTS_UPGRADEFAILED0',"Please note the messages and try to correct the problems with phpMyadmin and the sql definition's file available in the 'sql' folder of the shortcuts module");
-define('_AM_SHORTCUTS_UPGRADECOMPLETE','Upgrade Complete');
-define('_AM_SHORTCUTS_UPGR_ACCESS_ERROR',"Error, to use the upgrade script, you must be an admin on this module");
+define('_AM_USERPAGE_STATS',"there are  %u page(s) on your site");
+define("_AM_USERPAGE_GENERALSET", "Module's options" );
+define("_AM_USERPAGE_GOTOMOD","Go to the module");
+define("_AM_USERPAGE_MODULEADMIN","Module's Administration");
 ?>
