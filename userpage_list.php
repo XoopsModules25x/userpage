@@ -26,7 +26,7 @@ require_once XOOPS_ROOT_PATH.'/class/pagenav.php';
 
 $userpage_handler =& xoops_getmodulehandler('userpage', 'userpage');
 $allowhtml = userpage_utils::getModuleOption('allowhtml');
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 
 $limit = userpage_utils::getModuleOption('linesperpage');
 $xoopsTpl->assign('allowrss', userpage_utils::getModuleOption('allowrss'));

@@ -69,7 +69,7 @@ function userpage_html2text($document)
 }
 
 
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 
 $page_id = isset($_GET['page_id']) ? intval($_GET['page_id']) : 0;
 
