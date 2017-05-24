@@ -50,7 +50,7 @@ if($cnt>0) {
 }
 
 $page->setVar('dohtml', userpage_utils::getModuleOption('allowhtml'));
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">';
 echo '<html><head>';
 echo '<meta http-equiv="Content-Type" content="text/html; charset='._CHARSET.'" />';

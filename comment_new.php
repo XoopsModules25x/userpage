@@ -23,7 +23,7 @@
 require 'header.php';
 $userpage_handler =& xoops_getmodulehandler('userpage', 'userpage');
 global $myts;
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 $com_itemid = isset($_GET['com_itemid']) ? intval($_GET['com_itemid']) : 0;
 if ($com_itemid > 0) {
 	$criteria = new Criteria('up_pageid', $com_itemid, '=');

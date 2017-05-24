@@ -25,7 +25,7 @@ $xoopsOption['template_main'] = 'userpage_edit.html';
 require_once XOOPS_ROOT_PATH.'/header.php';
 
 $userpage_handler =& xoops_getmodulehandler('userpage', 'userpage');
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 
 $op = 'edit';
 if(isset($_GET['op'])) {

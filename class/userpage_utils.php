@@ -661,7 +661,7 @@ class userpage_utils
 			$limit = $xoopsConfigSearch['keyword_min'];
 			$_SESSION['userpage_keywords_limit'] = $limit;
 		}
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$content = str_replace ("<br />", " ", $content);
 		$content= $myts->undoHtmlSpecialChars($content);
 		$content= strip_tags($content);
@@ -722,7 +722,7 @@ class userpage_utils
 		$ret = '';
 		$infotips = self::getModuleOption('infotips');
 		if($infotips > 0) {
-			$myts =& MyTextSanitizer::getInstance();
+			$myts = MyTextSanitizer::getInstance();
 			$ret = $myts->htmlSpecialChars(xoops_substr(strip_tags($text),0,$infotips));
 		}
 		return $ret;
