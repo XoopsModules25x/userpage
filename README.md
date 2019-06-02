@@ -25,7 +25,7 @@ Once they have created their page, it can be viewed by other users (and it can b
 - In the module's options, you can select if you want to activate Html, RSS feeds (and the text's length), you can also select the date's format and you can select to use kiovi.
 
 
-Limitations
+**Limitations:**
 For this moment users can only create one page
 
 [![Tutorial Available](https://xoops.org/images/tutorial-available-blue.svg)](https://www.gitbook.com/book/xoops/userpage-tutorial/) Tutorial: see [GitBook](https://www.gitbook.com/book/xoops/userpage-tutorial/).

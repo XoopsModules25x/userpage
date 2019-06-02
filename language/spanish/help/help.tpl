@@ -6,7 +6,7 @@
     <p class="even">This module is to create your own page<br> <br>
     </p><br>
     <strong><span style="text-decoration: underline;">What is userpage ?</span></strong><br>
-    With userpage, your registred users can create their own page (for example their biography).<br>
+    With Userpage, your registred users can create their own page (for example their biography).<br>
     Once they have created their page, it can be viewed by other users (and it can be commented too)<br><br><br>
     <strong><span style="text-decoration: underline;">Complete features list</span></strong><br>
     - Users can create their own page<br>- Users can see someone else page and a list of all the pages<br>
