@@ -2,7 +2,7 @@
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
 //                  Copyright (c) 2005-2006 Hervé Thouzard                   //
-//                     <http://www.herve-thouzard.com/>                      //
+//                     <http://www.herve-thouzard.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -23,6 +23,5 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-define("_MB_USERPAGE_ITEMS_COUNT","تعداد مواردی که نشان داده میشوند");
-define("_MB_USERPAGE_TITLES_LENGTH","طول عنوان");
-?>
+define('_MB_USERPAGE_ITEMS_COUNT', 'تعداد مواردی که نشان داده میشوند');
+define('_MB_USERPAGE_TITLES_LENGTH', 'طول عنوان');

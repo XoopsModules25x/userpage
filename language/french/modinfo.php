@@ -2,7 +2,7 @@
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
 //                  Copyright (c) 2005-2006 Instant Zero                     //
-//                     <http://xoops.instant-zero.com/>                      //
+//                     <http://xoops.instant-zero.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -24,38 +24,37 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-define('_MI_USERPAGE_NAME',"UserPage");
-define('_MI_USERPAGE_DESC',"Module permettant aux utilisateurs enregistrés de votre site de créer leur propre page");
-define('_MI_USERPAGE_ADMMENU1',"Statistiques");
-define('_MI_USERPAGE_OPT0',"Permettre l'utilisation du html ?");
-define('_MI_USERPAGE_OPT0_DSC',"Permet ou non aux utilisateurs d'utiliser du code html");
-define('_MI_USERPAGE_OPT1',"Permettre l'utilisation des flux RSS ?");
-define('_MI_USERPAGE_OPT1_DSC',"");
-define('_MI_USERPAGE_OPT3',"Format de la date");
-define('_MI_USERPAGE_OPT3_DSC',"Voir le format <a href='http://fr3.php.net/manual/fr/function.date.php'>Php</a> pour plus d'informations");
-define('_MI_USERPAGE_OPT4',"Nombre de caractères à afficher dans le flux RSS ?");
-define('_MI_USERPAGE_OPT4_DSC',"Choisissez le nombre de caractères qui seront pris du texte pour être placé dans le flux RSS");
-define('_MI_USERPAGE_OPT5',"Nombre de lignes par page (dans le listing des pages)");
-define('_MI_USERPAGE_OPT5_DSC',"Choisissez le nombre de lignes représentant une page côté utilisateur");
+define('_MI_USERPAGE_NAME', 'UserPage');
+define('_MI_USERPAGE_DESC', 'Module permettant aux utilisateurs enregistrÃ©s de votre site de crÃ©er leur propre page');
+define('_MI_USERPAGE_ADMMENU1', 'Statistiques');
+define('_MI_USERPAGE_OPT0', "Permettre l'utilisation du html ?");
+define('_MI_USERPAGE_OPT0_DSC', "Permet ou non aux utilisateurs d'utiliser du code html");
+define('_MI_USERPAGE_OPT1', "Permettre l'utilisation des flux RSS ?");
+define('_MI_USERPAGE_OPT1_DSC', '');
+define('_MI_USERPAGE_OPT3', 'Format de la date');
+define('_MI_USERPAGE_OPT3_DSC', "Voir le format <a href='http://fr3.php.net/manual/fr/function.date.php'>Php</a> pour plus d'informations");
+define('_MI_USERPAGE_OPT4', 'Nombre de caractÃ¨res Ã  afficher dans le flux RSS ?');
+define('_MI_USERPAGE_OPT4_DSC', 'Choisissez le nombre de caractÃ¨res qui seront pris du texte pour Ãªtre placÃ© dans le flux RSS');
+define('_MI_USERPAGE_OPT5', 'Nombre de lignes par page (dans le listing des pages)');
+define('_MI_USERPAGE_OPT5_DSC', 'Choisissez le nombre de lignes reprÃ©sentant une page cÃ´tÃ© utilisateur');
 // Changed in version 1.1
 // define('_MI_USERPAGE_OPT6',"Utiliser kiovi ?");
-define('_MI_USERPAGE_OPT6',"Editeur à utiliser ?");
-//define('_MI_USERPAGE_OPT6_DSC',"Si vous réglez cette option à Oui, n'oubliez pas de mettre la première option (Permettre l'utilisation du html) à oui aussi.");
-define('_MI_USERPAGE_OPT6_DSC',"Choisissez l'éditeur à utiliser et si nécessaire, n'oubliez pas de mettre la première option (Permettre l'utilisation du html) à oui.");
-define('_MI_USERPAGE_BNAME1',"Dernières pages crées");
-define('_MI_USERPAGE_BNAME2',"Pages les plus vues");
-define('_MI_USERPAGE_BNAME3',"Pages au hasard");
-define('_MI_USERPAGE_MENU1',"Liste des pages");
+define('_MI_USERPAGE_OPT6', 'Editeur Ã  utiliser ?');
+//define('_MI_USERPAGE_OPT6_DSC',"Si vous rÃ©glez cette option Ã  Oui, n'oubliez pas de mettre la premiÃ¨re option (Permettre l'utilisation du html) Ã  oui aussi.");
+define('_MI_USERPAGE_OPT6_DSC', "Choisissez l'Ã©diteur Ã  utiliser et si nÃ©cessaire, n'oubliez pas de mettre la premiÃ¨re option (Permettre l'utilisation du html) Ã  oui.");
+define('_MI_USERPAGE_BNAME1', 'DerniÃ¨res pages crÃ©es');
+define('_MI_USERPAGE_BNAME2', 'Pages les plus vues');
+define('_MI_USERPAGE_BNAME3', 'Pages au hasard');
+define('_MI_USERPAGE_MENU1', 'Liste des pages');
 
 // Added in version 1.1
-define("_MI_USERPAGE_FORM_COMPACT","Compact");
-define("_MI_USERPAGE_FORM_DHTML","DHTML");
-define("_MI_USERPAGE_FORM_SPAW","Spaw Editor");
-define("_MI_USERPAGE_FORM_HTMLAREA","HtmlArea Editor");
-define("_MI_USERPAGE_FORM_FCK","FCK Editor");
-define("_MI_USERPAGE_FORM_KOIVI","Koivi Editor");
-define("_MI_USERPAGE_FORM_TINYEDITOR","TinyEditor");
+define('_MI_USERPAGE_FORM_COMPACT', 'Compact');
+define('_MI_USERPAGE_FORM_DHTML', 'DHTML');
+define('_MI_USERPAGE_FORM_SPAW', 'Spaw Editor');
+define('_MI_USERPAGE_FORM_HTMLAREA', 'HtmlArea Editor');
+define('_MI_USERPAGE_FORM_FCK', 'FCK Editor');
+define('_MI_USERPAGE_FORM_KOIVI', 'Koivi Editor');
+define('_MI_USERPAGE_FORM_TINYEDITOR', 'TinyEditor');
 
 // Added in version 1.3
-define("_MI_USERPAGE_URL_REWRITING","Use URL Rewriting?");
-?>
+define('_MI_USERPAGE_URL_REWRITING', 'Use URL Rewriting?');

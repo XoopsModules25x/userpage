@@ -2,7 +2,7 @@
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
 //                  Copyright (c) 2005-2006 Instant Zero                     //
-//                     <http://xoops.instant-zero.com/>                      //
+//                     <http://xoops.instant-zero.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -24,23 +24,22 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-define('_MI_USERPAGE_NAME',"OsobnÌ str·nky");
-define('_MI_USERPAGE_DESC',"Enable your registred users to create their own page");
-define('_MI_USERPAGE_ADMMENU1',"Statistika");
-define('_MI_USERPAGE_OPT0',"Povolit HTML ?");
-define('_MI_USERPAGE_OPT0_DSC',"Pokud chceö aby uûivatelÈ mohli pouûÌt HTML kÛd");
-define('_MI_USERPAGE_OPT1',"Povolit RSS ?");
-define('_MI_USERPAGE_OPT1_DSC',"");
-define('_MI_USERPAGE_OPT3',"Form·t datumu");
-define('_MI_USERPAGE_OPT3_DSC',"PodÌvej se na <a href='http://fr3.php.net/manual/fr/function.date.php'>Php</a> pro dalöÌ informace ohlednÏ nastavenÌ datumu.");
-define('_MI_USERPAGE_OPT4',"PoËet znak˘ pro zobrazenÌ RSS kan·lu ");
-define('_MI_USERPAGE_OPT4_DSC',"Zvol poËet viditeln˝ch znak˘ pro RSS kan·l.");
-define('_MI_USERPAGE_OPT5',"PoËet ¯·dek na str·nce (ve v˝pisu str·nek).");
-define('_MI_USERPAGE_OPT5_DSC',"PoËet ¯·dek na uûivatelskÈ str·nce.");
-define('_MI_USERPAGE_OPT6',"PouûÌt kiovi ?");
-define('_MI_USERPAGE_OPT6_DSC',"Jestliûe povolÌö tuto volbu, nezapomeÚ zapnout i prvnÌ poloûku (Povolit HTML).");
-define('_MI_USERPAGE_BNAME1',"PoslednÌ vytvo¯enÈ str·nky");
-define('_MI_USERPAGE_BNAME2',"NejvÌce zobrazovanÈ");
-define('_MI_USERPAGE_BNAME3',"N·hodn· str·nka");
-define('_MI_USERPAGE_MENU1',"Seznam str·nek");
-?>
+define('_MI_USERPAGE_NAME', 'Osobn√≠ str√°nky');
+define('_MI_USERPAGE_DESC', 'Enable your registred users to create their own page');
+define('_MI_USERPAGE_ADMMENU1', 'Statistika');
+define('_MI_USERPAGE_OPT0', 'Povolit HTML ?');
+define('_MI_USERPAGE_OPT0_DSC', 'Pokud chce≈° aby u≈æivatel√© mohli pou≈æ√≠t HTML k√≥d');
+define('_MI_USERPAGE_OPT1', 'Povolit RSS ?');
+define('_MI_USERPAGE_OPT1_DSC', '');
+define('_MI_USERPAGE_OPT3', 'Form√°t datumu');
+define('_MI_USERPAGE_OPT3_DSC', "Pod√≠vej se na <a href='http://fr3.php.net/manual/fr/function.date.php'>Php</a> pro dal≈°√≠ informace ohledn√¨ nastaven√≠ datumu.");
+define('_MI_USERPAGE_OPT4', 'Po√®et znak√π pro zobrazen√≠ RSS kan√°lu ');
+define('_MI_USERPAGE_OPT4_DSC', 'Zvol po√®et viditeln√Ωch znak√π pro RSS kan√°l.');
+define('_MI_USERPAGE_OPT5', 'Po√®et √∏√°dek na str√°nce (ve v√Ωpisu str√°nek).');
+define('_MI_USERPAGE_OPT5_DSC', 'Po√®et √∏√°dek na u≈æivatelsk√© str√°nce.');
+define('_MI_USERPAGE_OPT6', 'Pou≈æ√≠t kiovi ?');
+define('_MI_USERPAGE_OPT6_DSC', 'Jestli≈æe povol√≠≈° tuto volbu, nezapome√≤ zapnout i prvn√≠ polo≈æku (Povolit HTML).');
+define('_MI_USERPAGE_BNAME1', 'Posledn√≠ vytvo√∏en√© str√°nky');
+define('_MI_USERPAGE_BNAME2', 'Nejv√≠ce zobrazovan√©');
+define('_MI_USERPAGE_BNAME3', 'N√°hodn√° str√°nka');
+define('_MI_USERPAGE_MENU1', 'Seznam str√°nek');

@@ -2,7 +2,7 @@
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
 //                  Copyright (c) 2005-2006 Instant Zero                     //
-//                     <http://xoops.instant-zero.com/>                      //
+//                     <http://xoops.instant-zero.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -24,8 +24,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-define('_AM_USERPAGE_STATS'," ÊÃœ Õ«·Ì«  %u ’›Õ… „” ÷«›… ›Ì «·„Êﬁ⁄");
-define("_AM_USERPAGE_GENERALSET", "≈⁄œ«œ«  «·»—‰«„Ã" );
-define("_AM_USERPAGE_GOTOMOD","’›Õ… «·»—‰«„Ã");
-define("_AM_USERPAGE_MODULEADMIN","≈œ«—… »—‰«„Ã");
-?>
+define('_AM_USERPAGE_STATS', '√ä√¶√å√è √ç√á√°√≠√á√∞  %u √ï√ù√ç√â √£√ì√ä√ñ√á√ù√â √ù√≠ √á√°√£√¶√û√ö');
+define('_AM_USERPAGE_GENERALSET', '√Ö√ö√è√á√è√á√ä √á√°√à√ë√§√á√£√å');
+define('_AM_USERPAGE_GOTOMOD', '√ï√ù√ç√â √á√°√à√ë√§√á√£√å');
+define('_AM_USERPAGE_MODULEADMIN', '√Ö√è√á√ë√â √à√ë√§√á√£√å');

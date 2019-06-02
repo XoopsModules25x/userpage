@@ -2,7 +2,7 @@
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
 //                  Copyright (c) 2005-2006 Instant Zero                     //
-//                     <http://xoops.instant-zero.com/>                      //
+//                     <http://xoops.instant-zero.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -23,6 +23,5 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-define("_MB_USERPAGE_ITEMS_COUNT","⁄œœ —Ê«»ÿ «·’›Õ«  ›Ì «·»·Êﬂ");
-define("_MB_USERPAGE_TITLES_LENGTH","⁄œœ Õ—Ê› «·⁄‰«ÊÌ‰");
-?>
+define('_MB_USERPAGE_ITEMS_COUNT', '√ö√è√è √ë√¶√á√à√ò √á√°√ï√ù√ç√á√ä √ù√≠ √á√°√à√°√¶√ü');
+define('_MB_USERPAGE_TITLES_LENGTH', '√ö√è√è √ç√ë√¶√ù √á√°√ö√§√á√¶√≠√§');

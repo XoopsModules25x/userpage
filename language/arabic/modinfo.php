@@ -2,7 +2,7 @@
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
 //                  Copyright (c) 2005-2006 Instant Zero                     //
-//                     <http://xoops.instant-zero.com/>                      //
+//                     <http://xoops.instant-zero.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -24,23 +24,22 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-define('_MI_USERPAGE_NAME',"œ·Ì· ’›Õ Ì");
-define('_MI_USERPAGE_DESC',"»—‰«„Ã Ì”„Õ ··√⁄÷«¡ «·„”Ã·Ì‰ »≈‰‘«¡ ’›Õ« Â„ «·Œ«’… ›Ì „Êﬁ⁄ﬂ");
-define('_MI_USERPAGE_ADMMENU1',"«·≈Õ’«∆Ì« ");
-define('_MI_USERPAGE_OPT0'," ›⁄Ì· √ﬂÊ«œ HTML ø");
-define('_MI_USERPAGE_OPT0_DSC',"≈Œ — ‰⁄„ ··”„«Õ ··√⁄÷«¡ »≈” ⁄„«· «·√ﬂÊ«œ ›Ì ’›Õ« Â„");
-define('_MI_USERPAGE_OPT1'," ›⁄Ì· ﬂÊœ „‘«—ﬂ… «·»Ì«‰«  RSS ø");
-define('_MI_USERPAGE_OPT1_DSC',"");
-define('_MI_USERPAGE_OPT3',"ÂÌ∆… «· ÊﬁÌ ");
-define('_MI_USERPAGE_OPT3_DSC',"—«Ã⁄ ’›Õ… ÊŸÌ›… «· ÊﬁÌ  ›Ì „Êﬁ⁄ <a href='http://fr3.php.net/manual/fr/function.date.php'>Php</a> ··Õ’Ê· ⁄·Ï «·„“Ìœ „‰ «·„⁄·Ê„« ");
-define('_MI_USERPAGE_OPT4',"⁄œœ «·Õ—Ê› «·„”„ÊÕ »⁄—÷Â« ›Ì ﬂÊœ RSS");
-define('_MI_USERPAGE_OPT4_DSC',"Õœœ ⁄œœ «·√Õ—› «·„”„ÊÕ »„‘«Âœ Â«");
-define('_MI_USERPAGE_OPT5',"⁄œœ ’›Ê› «·ﬁ«∆„… ›Ì ﬂ· ’›Õ…");
-define('_MI_USERPAGE_OPT5_DSC',"Õœœ ⁄œœ «·’›Ê› ›Ì «·’›Õ…");
-define('_MI_USERPAGE_OPT6',"≈” Œœ«„ „Õ—— «·‰’Ê’ «·„ ÿÊ— Koivi ø");
-define('_MI_USERPAGE_OPT6_DSC',"›Ì Õ«·… ≈Œ Ì«— ‰⁄„ ÌÃ» ⁄·Ìﬂ «· √ﬂœ „‰  ›⁄Ì· √ﬂÊ«œ HTML Ê  —ﬂÌ» «·„Õ—— «·„ ÿÊ—");
-define('_MI_USERPAGE_BNAME1',"ÃœÌœ œ·Ì· ’›Õ Ì");
-define('_MI_USERPAGE_BNAME2',"√ﬂÀ— «·’›Õ«  „‘«Âœ…");
-define('_MI_USERPAGE_BNAME3',"’›Õ«  ⁄‘Ê«∆Ì…");
-define('_MI_USERPAGE_MENU1',"œ·Ì· «·’›Õ«  «·„” ÷«›…");
-?>
+define('_MI_USERPAGE_NAME', '√è√°√≠√° √ï√ù√ç√ä√≠');
+define('_MI_USERPAGE_DESC', '√à√ë√§√á√£√å √≠√ì√£√ç √°√°√É√ö√ñ√á√Å √á√°√£√ì√å√°√≠√§ √à√Ö√§√î√á√Å √ï√ù√ç√á√ä√•√£ √á√°√é√á√ï√â √ù√≠ √£√¶√û√ö√ü');
+define('_MI_USERPAGE_ADMMENU1', '√á√°√Ö√ç√ï√á√Ü√≠√á√ä');
+define('_MI_USERPAGE_OPT0', '√ä√ù√ö√≠√° √É√ü√¶√á√è HTML ¬ø');
+define('_MI_USERPAGE_OPT0_DSC', '√Ö√é√ä√ë √§√ö√£ √°√°√ì√£√á√ç √°√°√É√ö√ñ√á√Å √à√Ö√ì√ä√ö√£√á√° √á√°√É√ü√¶√á√è √ù√≠ √ï√ù√ç√á√ä√•√£');
+define('_MI_USERPAGE_OPT1', '√ä√ù√ö√≠√° √ü√¶√è √£√î√á√ë√ü√â √á√°√à√≠√á√§√á√ä RSS ¬ø');
+define('_MI_USERPAGE_OPT1_DSC', '');
+define('_MI_USERPAGE_OPT3', '√•√≠√Ü√â √á√°√ä√¶√û√≠√ä');
+define('_MI_USERPAGE_OPT3_DSC', "√ë√á√å√ö √ï√ù√ç√â √¶√ô√≠√ù√â √á√°√ä√¶√û√≠√ä √ù√≠ √£√¶√û√ö <a href='http://fr3.php.net/manual/fr/function.date.php'>Php</a> √°√°√ç√ï√¶√° √ö√°√¨ √á√°√£√í√≠√è √£√§ √á√°√£√ö√°√¶√£√á√ä");
+define('_MI_USERPAGE_OPT4', '√ö√è√è √á√°√ç√ë√¶√ù √á√°√£√ì√£√¶√ç √à√ö√ë√ñ√•√á √ù√≠ √ü√¶√è RSS');
+define('_MI_USERPAGE_OPT4_DSC', '√ç√è√è √ö√è√è √á√°√É√ç√ë√ù √á√°√£√ì√£√¶√ç √à√£√î√á√•√è√ä√•√á');
+define('_MI_USERPAGE_OPT5', '√ö√è√è √ï√ù√¶√ù √á√°√û√á√Ü√£√â √ù√≠ √ü√° √ï√ù√ç√â');
+define('_MI_USERPAGE_OPT5_DSC', '√ç√è√è √ö√è√è √á√°√ï√ù√¶√ù √ù√≠ √á√°√ï√ù√ç√â');
+define('_MI_USERPAGE_OPT6', '√Ö√ì√ä√é√è√á√£ √£√ç√ë√ë √á√°√§√ï√¶√ï √á√°√£√ä√ò√¶√ë Koivi ¬ø');
+define('_MI_USERPAGE_OPT6_DSC', '√ù√≠ √ç√á√°√â √Ö√é√ä√≠√á√ë √§√ö√£ √≠√å√à √ö√°√≠√ü √á√°√ä√É√ü√è √£√§ √ä√ù√ö√≠√° √É√ü√¶√á√è HTML √¶ √ä√ë√ü√≠√à √á√°√£√ç√ë√ë √á√°√£√ä√ò√¶√ë');
+define('_MI_USERPAGE_BNAME1', '√å√è√≠√è √è√°√≠√° √ï√ù√ç√ä√≠');
+define('_MI_USERPAGE_BNAME2', '√É√ü√ã√ë √á√°√ï√ù√ç√á√ä √£√î√á√•√è√â');
+define('_MI_USERPAGE_BNAME3', '√ï√ù√ç√á√ä √ö√î√¶√á√Ü√≠√â');
+define('_MI_USERPAGE_MENU1', '√è√°√≠√° √á√°√ï√ù√ç√á√ä √á√°√£√ì√ä√ñ√á√ù√â');

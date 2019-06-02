@@ -1,14 +1,14 @@
-TraducciÛn realizada por http://riosoft.es para "Proyecto e—e"
-Para su instalaciÛn copiad el directorio 'spanish' dentro del directorio 'language' de vuestro mÛdulo.
+Traducci√≥n realizada por http://riosoft.es para "Proyecto e√ëe"
+Para su instalaci√≥n copiad el directorio 'spanish' dentro del directorio 'language' de vuestro m√≥dulo.
 
-No nos hacemos responsables del mal funcionamiento de este paquete aunque haya sido debidamente comprobado. Se entrega tal cual es y sin garantÌa de ning˙n tipo. Aceptas con el uso del mismo estas condiciones.
+No nos hacemos responsables del mal funcionamiento de este paquete aunque haya sido debidamente comprobado. Se entrega tal cual es y sin garant√≠a de ning√∫n tipo. Aceptas con el uso del mismo estas condiciones.
 
-Si encontr·is alg˙n error o querÈis contribuir con algo acudid a:
+Si encontr√°is alg√∫n error o quer√©is contribuir con algo acudid a:
 
-http://riosoft.es  (P·gina personal)
-http://rioxoops.es (mis artÌculos, descargas, versiones especiales, etc para Xoops)
-http://dev.xoops.org/modules/xfmod/project/?traducciones  (Repositorio del Proyecto e—e)
-http://esxoops.com (soporte en espaÒol para Xoops)
+http://riosoft.es  (P√°gina personal)
+http://rioxoops.es (mis art√≠culos, descargas, versiones especiales, etc para Xoops)
+http://dev.xoops.org/modules/xfmod/project/?traducciones  (Repositorio del Proyecto e√ëe)
+http://esxoops.com (soporte en espa√±ol para Xoops)
 
 Esperamos vuestros comentarios, sugerencias, contribuciones, etc.
 
@@ -20,16 +20,16 @@ Ismael R. (Riosoft)
 
 RECORDANDO:
 
-* Como siempre recuerdos para mis amigos Acostini Soft (Acosta) y Joaquinillo (necssus). 
+* Como siempre recuerdos para mis amigos Acostini Soft (Acosta) y Joaquinillo (necssus).
 
 RECOMENDANDO:
 
-Si querÈis leer cosas lindas de una amiga, por favor, visitad Ruta Fulgurante en 
+Si quer√©is leer cosas lindas de una amiga, por favor, visitad Ruta Fulgurante en
 http://arandanilla.es
 
-LOS CR…DITOS PARA:
+LOS CR√âDITOS PARA:
 http://riosoft.es
 http://rioxoops.es
 
-Si consideras ˙til este trabajo haz clic en alguno de los banners de mi p·gina  :-)
+Si consideras √∫til este trabajo haz clic en alguno de los banners de mi p√°gina  :-)
 Gracias.

@@ -1,8 +1,8 @@
 <?php
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
-//                  Copyright (c) 2005-2006 HervÈ Thouzard                   //
-//                     <http://www.herve-thouzard.com/>                      //
+//                  Copyright (c) 2005-2006 Herv√© Thouzard                   //
+//                     <http://www.herve-thouzard.com>                      //
 //                  Traduzione di Lavinia Ravagli (Lava_)                    //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
@@ -24,32 +24,31 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-define("_USERPAGE_TITLE","Titolo");
-define("_USERPAGE_CONTENT","Contenuto");
-define("_USERPAGE_CREATION_DATE","Data di creazione: ");
-define("_USERPAGE_HITS","Visualizza");
-define("_USERPAGE_EDIT","Modifica");
-define("_USERPAGE_PRINTABLE","Versione per la stampa");
-define("_USERPAGE_PDF","Crea PDF");
-define("_USERPAGE_EMAIL","Invia questa pagina ad un amico");
-define("_USERPAGE_YOUR_PAGE","La tua pagina");
-define("_USERPAGE_RSS_FEED","RSS Feed");
-define("_USERPAGE_INTARTICLE","Pagina interessante su %s");
-define("_USERPAGE_INTARTFOUND","Ecco una pagina interessante che ho trovato su %s");
-define("_USERPAGE_EMPTY_PAGE","La pagina Ë vuota");
-define("_USERPAGE_DB_OK","Il database Ë stato aggiornato");
-define("_USERPAGE_DB_PB", "Errore durante l'aggiornamento del database");
-define("_USERPAGE_PAGE_NOT_FOUND","Pagina non trovata");
-define("_USERPAGE_PAGE_OF","Pagina di ");
-define("_USERPAGE_THISCOMESFROM","Questa pagina Ë stata creata da %s");
-define("_USERPAGE_URLFORPAGE","L'indirizzo di questa pagina Ë: ");
-define("_USERPAGE_BOOK","Lista delle pagine");
-define("_USERPAGE_USER","Utente");
-define("_USERPAGE_DATE","Data");
-define('_USERPAGE_PDF_PAGE',"Pagina");
-define('_USERPAGE_POSTEDON',"Inviato il: ");
-define('_AD_ACTION',"Azione");
+define('_USERPAGE_TITLE', 'Titolo');
+define('_USERPAGE_CONTENT', 'Contenuto');
+define('_USERPAGE_CREATION_DATE', 'Data di creazione: ');
+define('_USERPAGE_HITS', 'Visualizza');
+define('_USERPAGE_EDIT', 'Modifica');
+define('_USERPAGE_PRINTABLE', 'Versione per la stampa');
+define('_USERPAGE_PDF', 'Crea PDF');
+define('_USERPAGE_EMAIL', 'Invia questa pagina ad un amico');
+define('_USERPAGE_YOUR_PAGE', 'La tua pagina');
+define('_USERPAGE_RSS_FEED', 'RSS Feed');
+define('_USERPAGE_INTARTICLE', 'Pagina interessante su %s');
+define('_USERPAGE_INTARTFOUND', 'Ecco una pagina interessante che ho trovato su %s');
+define('_USERPAGE_EMPTY_PAGE', 'La pagina ÔøΩ vuota');
+define('_USERPAGE_DB_OK', 'Il database ÔøΩ stato aggiornato');
+define('_USERPAGE_DB_PB', "Errore durante l'aggiornamento del database");
+define('_USERPAGE_PAGE_NOT_FOUND', 'Pagina non trovata');
+define('_USERPAGE_PAGE_OF', 'Pagina di ');
+define('_USERPAGE_THISCOMESFROM', 'Questa pagina ÔøΩ stata creata da %s');
+define('_USERPAGE_URLFORPAGE', "L'indirizzo di questa pagina ÔøΩ: ");
+define('_USERPAGE_BOOK', 'Lista delle pagine');
+define('_USERPAGE_USER', 'Utente');
+define('_USERPAGE_DATE', 'Data');
+define('_USERPAGE_PDF_PAGE', 'Pagina');
+define('_USERPAGE_POSTEDON', 'Inviato il: ');
+define('_AD_ACTION', 'Azione');
 // Added in version 1.2
-define('_USERPAGE_ARE_YOU_SURE',"Sei sicuro ?");
-define('_USERPAGE_VIEW',"Visualizza");
-?>
+define('_USERPAGE_ARE_YOU_SURE', 'Sei sicuro ?');
+define('_USERPAGE_VIEW', 'Visualizza');

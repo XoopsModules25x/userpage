@@ -2,7 +2,7 @@
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
 //                  Copyright (c) 2005-2006 Instant Zero                     //
-//                     <http://xoops.instant-zero.com/>                      //
+//                     <http://xoops.instant-zero.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -24,8 +24,7 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-define('_AM_USERPAGE_STATS',"Es gibt  %u Benutzerseite(n) auf Ihrer Website");
-define("_AM_USERPAGE_GENERALSET", "Modul Optionen" );
-define("_AM_USERPAGE_GOTOMOD","Modul starten");
-define("_AM_USERPAGE_MODULEADMIN","Modul Administration");
-?>
+define('_AM_USERPAGE_STATS', 'Es gibt  %u Benutzerseite(n) auf Ihrer Website');
+define('_AM_USERPAGE_GENERALSET', 'Modul Optionen');
+define('_AM_USERPAGE_GOTOMOD', 'Modul starten');
+define('_AM_USERPAGE_MODULEADMIN', 'Modul Administration');

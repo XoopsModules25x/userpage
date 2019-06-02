@@ -9,4 +9,4 @@ CREATE TABLE userpage (
   KEY up_uid (up_uid),
   KEY up_title (up_title),
   KEY up_hits (up_hits)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;

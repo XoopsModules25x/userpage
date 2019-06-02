@@ -1,8 +1,8 @@
 <?php
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
-//                  Copyright (c) 2005-2006 HervÈ Thouzard                   //
-//                     <http://www.herve-thouzard.com/>                      //
+//                  Copyright (c) 2005-2006 Herv√© Thouzard                   //
+//                     <http://www.herve-thouzard.com>                      //
 //                  Traduzione di Lavinia Ravagli (Lava_)                    //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
@@ -24,6 +24,5 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-define("_MB_USERPAGE_ITEMS_COUNT","Numero di oggetti da visualizzare");
-define("_MB_USERPAGE_TITLES_LENGTH","Lunghezza dei titoli");
-?>
+define('_MB_USERPAGE_ITEMS_COUNT', 'Numero di oggetti da visualizzare');
+define('_MB_USERPAGE_TITLES_LENGTH', 'Lunghezza dei titoli');

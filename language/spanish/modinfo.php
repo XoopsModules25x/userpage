@@ -1,8 +1,8 @@
 <?php
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
-//                  Copyright (c) 2005-2006 Hervé Thouzard                   //
-//                     <http://www.herve-thouzard.com/>                      //
+//                  Copyright (c) 2005-2006 HervÃ© Thouzard                   //
+//                     <http://www.herve-thouzard.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -24,36 +24,35 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 
-define('_MI_USERPAGE_NAME',"Página del Usuario");
-define('_MI_USERPAGE_DESC',"Permitir que los usuarios registrados creen sus propias páginase");
-define('_MI_USERPAGE_ADMMENU1',"Estadísticas");
-define('_MI_USERPAGE_OPT0',"¿ Permitir html ?");
-define('_MI_USERPAGE_OPT0_DSC',"Decida si los usuarios podrán usar html");
-define('_MI_USERPAGE_OPT1',"Permitir RSS Feed ?");
-define('_MI_USERPAGE_OPT1_DSC',"");
-define('_MI_USERPAGE_OPT3',"Formato de la fecha");
-define('_MI_USERPAGE_OPT3_DSC',"Revise la función de la fecha en <a href='http://fr3.php.net/manual/fr/function.date.php'>Php</a> para más información");
-define('_MI_USERPAGE_OPT4',"Número de caracteres que se mostrarán en RSS Feed ?");
-define('_MI_USERPAGE_OPT4_DSC',"Elija el número de caracteres visibles en RSS Feed");
-define('_MI_USERPAGE_OPT5',"Número de líneas por página (en el listado de páginas)");
-define('_MI_USERPAGE_OPT5_DSC',"Elija el número de líenas del lado del usuario");
-define('_MI_USERPAGE_OPT6',"¿ Usar kiovi ?");
-define('_MI_USERPAGE_OPT6_DSC',"Si marca esta opción, no olvide marcar primero (Permitir html) también");
-define('_MI_USERPAGE_OPT6',"¿Qué editor usuará?");
+define('_MI_USERPAGE_NAME', 'Pï¿½gina del Usuario');
+define('_MI_USERPAGE_DESC', 'Permitir que los usuarios registrados creen sus propias pï¿½ginase');
+define('_MI_USERPAGE_ADMMENU1', 'Estadï¿½sticas');
+define('_MI_USERPAGE_OPT0', 'ï¿½ Permitir html ?');
+define('_MI_USERPAGE_OPT0_DSC', 'Decida si los usuarios podrï¿½n usar html');
+define('_MI_USERPAGE_OPT1', 'Permitir RSS Feed ?');
+define('_MI_USERPAGE_OPT1_DSC', '');
+define('_MI_USERPAGE_OPT3', 'Formato de la fecha');
+define('_MI_USERPAGE_OPT3_DSC', "Revise la funciï¿½n de la fecha en <a href='http://fr3.php.net/manual/fr/function.date.php'>Php</a> para mï¿½s informaciï¿½n");
+define('_MI_USERPAGE_OPT4', 'Nï¿½mero de caracteres que se mostrarï¿½n en RSS Feed ?');
+define('_MI_USERPAGE_OPT4_DSC', 'Elija el nï¿½mero de caracteres visibles en RSS Feed');
+define('_MI_USERPAGE_OPT5', 'Nï¿½mero de lï¿½neas por pï¿½gina (en el listado de pï¿½ginas)');
+define('_MI_USERPAGE_OPT5_DSC', 'Elija el nï¿½mero de lï¿½enas del lado del usuario');
+define('_MI_USERPAGE_OPT6', 'ï¿½ Usar kiovi ?');
+define('_MI_USERPAGE_OPT6_DSC', 'Si marca esta opciï¿½n, no olvide marcar primero (Permitir html) tambiï¿½n');
+define('_MI_USERPAGE_OPT6', 'ï¿½Quï¿½ editor usuarï¿½?');
 //define('_MI_USERPAGE_OPT6_DSC',"If you set this option to true, don't forget to set the first option (Enable html) to true too");
 // Changed in version 1.1
-define('_MI_USERPAGE_OPT6_DSC',"Elija el editor a usar. Si fuese necesario no olvide activar la casilla (Permitir HTML)");
-define('_MI_USERPAGE_BNAME1',"Últimas páginas creadas");
-define('_MI_USERPAGE_BNAME2',"Páginas más populares");
-define('_MI_USERPAGE_BNAME3',"Páginas al aleatorias");
-define('_MI_USERPAGE_MENU1',"Listado de páginas");
-							 
+define('_MI_USERPAGE_OPT6_DSC', 'Elija el editor a usar. Si fuese necesario no olvide activar la casilla (Permitir HTML)');
+define('_MI_USERPAGE_BNAME1', 'ï¿½ltimas pï¿½ginas creadas');
+define('_MI_USERPAGE_BNAME2', 'Pï¿½ginas mï¿½s populares');
+define('_MI_USERPAGE_BNAME3', 'Pï¿½ginas al aleatorias');
+define('_MI_USERPAGE_MENU1', 'Listado de pï¿½ginas');
+
 // Added in version 1.1
-define("_MI_USERPAGE_FORM_COMPACT","Compacto");
-define("_MI_USERPAGE_FORM_DHTML","DHTML");
-define("_MI_USERPAGE_FORM_SPAW","Spaw");
-define("_MI_USERPAGE_FORM_HTMLAREA","HtmlArea");
-define("_MI_USERPAGE_FORM_FCK","FCK");
-define("_MI_USERPAGE_FORM_KOIVI","Koivi");
-define("_MI_USERPAGE_FORM_TINYEDITOR","TinyEditor");
-?>
+define('_MI_USERPAGE_FORM_COMPACT', 'Compacto');
+define('_MI_USERPAGE_FORM_DHTML', 'DHTML');
+define('_MI_USERPAGE_FORM_SPAW', 'Spaw');
+define('_MI_USERPAGE_FORM_HTMLAREA', 'HtmlArea');
+define('_MI_USERPAGE_FORM_FCK', 'FCK');
+define('_MI_USERPAGE_FORM_KOIVI', 'Koivi');
+define('_MI_USERPAGE_FORM_TINYEDITOR', 'TinyEditor');

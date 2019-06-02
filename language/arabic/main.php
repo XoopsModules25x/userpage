@@ -2,7 +2,7 @@
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
 //                  Copyright (c) 2005-2006 Instant Zero                     //
-//                     <http://xoops.instant-zero.com/>                      //
+//                     <http://xoops.instant-zero.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -23,31 +23,30 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-define("_USERPAGE_TITLE","ÚäæÇä ÇáÕÝÍÉ");
-define("_USERPAGE_CONTENT","ÇáãÍÊæì");
-define("_USERPAGE_CREATION_DATE","ÊÇÑíÎ ÅäÔÇÁ ÇáÕÝÍÉ: ");
-define("_USERPAGE_HITS","ÇáãÔÇåÏÉ");
-define("_USERPAGE_EDIT","ÊÍÑíÑ ÇáÕÝÍÉ");
-define("_USERPAGE_PRINTABLE","ØÈÇÚÉ ÇáÕÝÍÉ");
-define("_USERPAGE_PDF","ÊÍæíá Åáì PDF");
-define("_USERPAGE_EMAIL","ÅÑÓÇá ÇáÕÝÍÉ Åáì ÕÏíÞ");
-define("_USERPAGE_YOUR_PAGE","ÕÝÍÊß ÇáÎÇÕÉ");
-define("_USERPAGE_RSS_FEED","ßæÏ RSS");
-define("_USERPAGE_INTARTICLE","ÕÝÍÉ ÊÓÊÍÞ ÇáãÔÇåÏÉ Ýí %s");
-define("_USERPAGE_INTARTFOUND","åÐå ÇáÕÝÍÉ ããíÒÉ æ ÌÏÊåÇ Ýí %s");
-define("_USERPAGE_EMPTY_PAGE","ÇáÕÝÍÉ ÝÇÑÛÉ");
-define("_USERPAGE_DB_OK","Êã ÊÍÏíË ÞÇÚÏÉ ÇáÈíÇäÇÊ ÈäÌÇÍ");
-define("_USERPAGE_DB_PB", "ÍÏË ÎØÃ ÃËäÇÁ ÊÍÏíË ÞÇÚÏÉ ÇáÈíÇäÇÊ");
-define("_USERPAGE_PAGE_NOT_FOUND","ÕÝÍÉ ÛíÑ ãæÌæÏÉ");
-define("_USERPAGE_PAGE_OF","ÕÝÍÉ ãä ");
-define("_USERPAGE_THISCOMESFROM","åÐå ÇáÕÝÍÉ ãæÌæÏÉ Ýí %s");
-define("_USERPAGE_URLFORPAGE","ÑÇÈØ ÇáÕÝÍÉ åæ:");
-define("_USERPAGE_BOOK","Ïáíá ÇáÕÝÍÇÊ");
-define("_USERPAGE_USER","ÇáÚÖæ");
-define("_USERPAGE_DATE","ÇáÊÇÑíÎ");
-define('_USERPAGE_PDF_PAGE',"ÇáÕÝÍÉ");
-define('_USERPAGE_POSTEDON',"ÃÑÓáÊ Ýí: ");
+define('_USERPAGE_TITLE', 'ÃšÃ¤Ã¦Ã‡Ã¤ Ã‡Ã¡Ã•ÃÃÃ‰');
+define('_USERPAGE_CONTENT', 'Ã‡Ã¡Ã£ÃÃŠÃ¦Ã¬');
+define('_USERPAGE_CREATION_DATE', 'ÃŠÃ‡Ã‘Ã­ÃŽ Ã…Ã¤Ã”Ã‡Ã Ã‡Ã¡Ã•ÃÃÃ‰: ');
+define('_USERPAGE_HITS', 'Ã‡Ã¡Ã£Ã”Ã‡Ã¥ÃÃ‰');
+define('_USERPAGE_EDIT', 'ÃŠÃÃ‘Ã­Ã‘ Ã‡Ã¡Ã•ÃÃÃ‰');
+define('_USERPAGE_PRINTABLE', 'Ã˜ÃˆÃ‡ÃšÃ‰ Ã‡Ã¡Ã•ÃÃÃ‰');
+define('_USERPAGE_PDF', 'ÃŠÃÃ¦Ã­Ã¡ Ã…Ã¡Ã¬ PDF');
+define('_USERPAGE_EMAIL', 'Ã…Ã‘Ã“Ã‡Ã¡ Ã‡Ã¡Ã•ÃÃÃ‰ Ã…Ã¡Ã¬ Ã•ÃÃ­Ãž');
+define('_USERPAGE_YOUR_PAGE', 'Ã•ÃÃÃŠÃŸ Ã‡Ã¡ÃŽÃ‡Ã•Ã‰');
+define('_USERPAGE_RSS_FEED', 'ÃŸÃ¦Ã RSS');
+define('_USERPAGE_INTARTICLE', 'Ã•ÃÃÃ‰ ÃŠÃ“ÃŠÃÃž Ã‡Ã¡Ã£Ã”Ã‡Ã¥ÃÃ‰ ÃÃ­ %s');
+define('_USERPAGE_INTARTFOUND', 'Ã¥ÃÃ¥ Ã‡Ã¡Ã•ÃÃÃ‰ Ã£Ã£Ã­Ã’Ã‰ Ã¦ ÃŒÃÃŠÃ¥Ã‡ ÃÃ­ %s');
+define('_USERPAGE_EMPTY_PAGE', 'Ã‡Ã¡Ã•ÃÃÃ‰ ÃÃ‡Ã‘Ã›Ã‰');
+define('_USERPAGE_DB_OK', 'ÃŠÃ£ ÃŠÃÃÃ­Ã‹ ÃžÃ‡ÃšÃÃ‰ Ã‡Ã¡ÃˆÃ­Ã‡Ã¤Ã‡ÃŠ ÃˆÃ¤ÃŒÃ‡Ã');
+define('_USERPAGE_DB_PB', 'ÃÃÃ‹ ÃŽÃ˜Ãƒ ÃƒÃ‹Ã¤Ã‡Ã ÃŠÃÃÃ­Ã‹ ÃžÃ‡ÃšÃÃ‰ Ã‡Ã¡ÃˆÃ­Ã‡Ã¤Ã‡ÃŠ');
+define('_USERPAGE_PAGE_NOT_FOUND', 'Ã•ÃÃÃ‰ Ã›Ã­Ã‘ Ã£Ã¦ÃŒÃ¦ÃÃ‰');
+define('_USERPAGE_PAGE_OF', 'Ã•ÃÃÃ‰ Ã£Ã¤ ');
+define('_USERPAGE_THISCOMESFROM', 'Ã¥ÃÃ¥ Ã‡Ã¡Ã•ÃÃÃ‰ Ã£Ã¦ÃŒÃ¦ÃÃ‰ ÃÃ­ %s');
+define('_USERPAGE_URLFORPAGE', 'Ã‘Ã‡ÃˆÃ˜ Ã‡Ã¡Ã•ÃÃÃ‰ Ã¥Ã¦:');
+define('_USERPAGE_BOOK', 'ÃÃ¡Ã­Ã¡ Ã‡Ã¡Ã•ÃÃÃ‡ÃŠ');
+define('_USERPAGE_USER', 'Ã‡Ã¡ÃšÃ–Ã¦');
+define('_USERPAGE_DATE', 'Ã‡Ã¡ÃŠÃ‡Ã‘Ã­ÃŽ');
+define('_USERPAGE_PDF_PAGE', 'Ã‡Ã¡Ã•ÃÃÃ‰');
+define('_USERPAGE_POSTEDON', 'ÃƒÃ‘Ã“Ã¡ÃŠ ÃÃ­: ');
 // Added in version 1.2
-define('_USERPAGE_ARE_YOU_SURE',"Are you sure ?");
-define('_USERPAGE_VIEW',"View");
-?>
+define('_USERPAGE_ARE_YOU_SURE', 'Are you sure ?');
+define('_USERPAGE_VIEW', 'View');

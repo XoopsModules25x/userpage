@@ -2,7 +2,7 @@
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
 //                  Copyright (c) 2005-2006 Instant Zero                     //
-//                     <http://xoops.instant-zero.com/>                      //
+//                     <http://xoops.instant-zero.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -23,31 +23,30 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-define("_USERPAGE_TITLE","Titlu");
-define("_USERPAGE_CONTENT","Continut");
-define("_USERPAGE_CREATION_DATE","Data Creare : ");
-define("_USERPAGE_HITS","Vizionare");
-define("_USERPAGE_EDIT","Editare");
-define("_USERPAGE_PRINTABLE","Versiune Printabila");
-define("_USERPAGE_PDF","Versiune PDF");
-define("_USERPAGE_EMAIL","Trimite aceasta pagina unui prieten");
-define("_USERPAGE_YOUR_PAGE","Pagina ta");
-define("_USERPAGE_RSS_FEED","RSS Feed");
-define("_USERPAGE_INTARTICLE","Pagina interesanta pe site`ul %s");
-define("_USERPAGE_INTARTFOUND","Uite o pagina interesanta gasita pe site`ul %s");
-define("_USERPAGE_EMPTY_PAGE","Pagina nu are continut");
-define("_USERPAGE_DB_OK","Baza de date a fost Actualizata");
-define("_USERPAGE_DB_PB", "Eroare de actualizare baza de date");
-define("_USERPAGE_PAGE_NOT_FOUND","Pagina nu a fost gasita");
-define("_USERPAGE_PAGE_OF","Pagina lui ");
-define("_USERPAGE_THISCOMESFROM","Aceasta pagina provine de pe site`ul %s");
-define("_USERPAGE_URLFORPAGE","URL`ul acestei pagini este:");
-define("_USERPAGE_BOOK","Lista Pagini");
-define("_USERPAGE_USER","Utilizator");
-define("_USERPAGE_DATE","Data");
-define('_USERPAGE_PDF_PAGE',"Pagina");
-define('_USERPAGE_POSTEDON',"Postata la data de : ");
+define('_USERPAGE_TITLE', 'Titlu');
+define('_USERPAGE_CONTENT', 'Continut');
+define('_USERPAGE_CREATION_DATE', 'Data Creare : ');
+define('_USERPAGE_HITS', 'Vizionare');
+define('_USERPAGE_EDIT', 'Editare');
+define('_USERPAGE_PRINTABLE', 'Versiune Printabila');
+define('_USERPAGE_PDF', 'Versiune PDF');
+define('_USERPAGE_EMAIL', 'Trimite aceasta pagina unui prieten');
+define('_USERPAGE_YOUR_PAGE', 'Pagina ta');
+define('_USERPAGE_RSS_FEED', 'RSS Feed');
+define('_USERPAGE_INTARTICLE', 'Pagina interesanta pe site`ul %s');
+define('_USERPAGE_INTARTFOUND', 'Uite o pagina interesanta gasita pe site`ul %s');
+define('_USERPAGE_EMPTY_PAGE', 'Pagina nu are continut');
+define('_USERPAGE_DB_OK', 'Baza de date a fost Actualizata');
+define('_USERPAGE_DB_PB', 'Eroare de actualizare baza de date');
+define('_USERPAGE_PAGE_NOT_FOUND', 'Pagina nu a fost gasita');
+define('_USERPAGE_PAGE_OF', 'Pagina lui ');
+define('_USERPAGE_THISCOMESFROM', 'Aceasta pagina provine de pe site`ul %s');
+define('_USERPAGE_URLFORPAGE', 'URL`ul acestei pagini este:');
+define('_USERPAGE_BOOK', 'Lista Pagini');
+define('_USERPAGE_USER', 'Utilizator');
+define('_USERPAGE_DATE', 'Data');
+define('_USERPAGE_PDF_PAGE', 'Pagina');
+define('_USERPAGE_POSTEDON', 'Postata la data de : ');
 // Added in version 1.2
-define('_USERPAGE_ARE_YOU_SURE',"Are you sure ?");
-define('_USERPAGE_VIEW',"View");
-?>
+define('_USERPAGE_ARE_YOU_SURE', 'Are you sure ?');
+define('_USERPAGE_VIEW', 'View');

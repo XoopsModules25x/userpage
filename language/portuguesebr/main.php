@@ -2,7 +2,7 @@
 //  ------------------------------------------------------------------------ //
 //                      USERPAGE - MODULE FOR XOOPS 2                        //
 //                  Copyright (c) 2005-2006 Instant Zero                     //
-//                     <http://xoops.instant-zero.com/>                      //
+//                     <http://xoops.instant-zero.com>                      //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -23,34 +23,33 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-if (!defined('_USERPAGE_TITLE')){
-define('_USERPAGE_TITLE', 'Título');
-define('_USERPAGE_CONTENT', 'Conteúdo');
-define('_USERPAGE_CREATION_DATE', 'Data de Criação :');
-define('_USERPAGE_HITS', 'Ver');
-define('_USERPAGE_EDIT', 'Editar');
-define('_USERPAGE_PRINTABLE', 'Versão de Impressa para um Amigo');
-define('_USERPAGE_PDF', 'Versão em PDF');
-define('_USERPAGE_EMAIL', 'Enviar esta página para um Amigo');
-define('_USERPAGE_YOUR_PAGE', 'Sua Página');
-define('_USERPAGE_RSS_FEED', 'RSS Feed');
-define('_USERPAGE_INTARTICLE', 'Página interessante em %s');
-define('_USERPAGE_INTARTFOUND', 'Aqui existe uma página muito interessante que eu encontrei em %s');
-define('_USERPAGE_EMPTY_PAGE', 'A página está vazia');
-define('_USERPAGE_DB_OK', 'O banco de dados foi atualizado');
-define('_USERPAGE_DB_PB', 'Erro enquanto atualizava o banco de dados');
-define('_USERPAGE_PAGE_NOT_FOUND', 'Página não encontrada');
-define('_USERPAGE_PAGE_OF', 'Página de');
-define('_USERPAGE_THISCOMESFROM', 'Esta página está vindo do %s');
-define('_USERPAGE_URLFORPAGE', 'O URL para esta página é:');
-define('_USERPAGE_BOOK', 'Listar Páginas');
-define('_USERPAGE_USER', 'Usuário');
-define('_USERPAGE_DATE', 'Data');
-define('_USERPAGE_PDF_PAGE', 'Página');
-define('_USERPAGE_POSTEDON', 'Enviado em : ');
-// Added in version 1.2
-define('_USERPAGE_ARE_YOU_SURE', 'Você tem certeza ?');
-define('_USERPAGE_VIEW', 'Ver');
-define('_AD_ACTION','Ação');
+if (!defined('_USERPAGE_TITLE')) {
+    define('_USERPAGE_TITLE', 'TÃ­tulo');
+    define('_USERPAGE_CONTENT', 'ConteÃºdo');
+    define('_USERPAGE_CREATION_DATE', 'Data de CriaÃ§Ã£o :');
+    define('_USERPAGE_HITS', 'Ver');
+    define('_USERPAGE_EDIT', 'Editar');
+    define('_USERPAGE_PRINTABLE', 'VersÃ£o de Impressa para um Amigo');
+    define('_USERPAGE_PDF', 'VersÃ£o em PDF');
+    define('_USERPAGE_EMAIL', 'Enviar esta pÃ¡gina para um Amigo');
+    define('_USERPAGE_YOUR_PAGE', 'Sua PÃ¡gina');
+    define('_USERPAGE_RSS_FEED', 'RSS Feed');
+    define('_USERPAGE_INTARTICLE', 'PÃ¡gina interessante em %s');
+    define('_USERPAGE_INTARTFOUND', 'Aqui existe uma pÃ¡gina muito interessante que eu encontrei em %s');
+    define('_USERPAGE_EMPTY_PAGE', 'A pÃ¡gina estÃ¡ vazia');
+    define('_USERPAGE_DB_OK', 'O banco de dados foi atualizado');
+    define('_USERPAGE_DB_PB', 'Erro enquanto atualizava o banco de dados');
+    define('_USERPAGE_PAGE_NOT_FOUND', 'PÃ¡gina nÃ£o encontrada');
+    define('_USERPAGE_PAGE_OF', 'PÃ¡gina de');
+    define('_USERPAGE_THISCOMESFROM', 'Esta pÃ¡gina estÃ¡ vindo do %s');
+    define('_USERPAGE_URLFORPAGE', 'O URL para esta pÃ¡gina Ã©:');
+    define('_USERPAGE_BOOK', 'Listar PÃ¡ginas');
+    define('_USERPAGE_USER', 'UsuÃ¡rio');
+    define('_USERPAGE_DATE', 'Data');
+    define('_USERPAGE_PDF_PAGE', 'PÃ¡gina');
+    define('_USERPAGE_POSTEDON', 'Enviado em : ');
+    // Added in version 1.2
+    define('_USERPAGE_ARE_YOU_SURE', 'VocÃª tem certeza ?');
+    define('_USERPAGE_VIEW', 'Ver');
+    define('_AD_ACTION', 'AÃ§Ã£o');
 }
-?>
